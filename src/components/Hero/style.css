@@ -1,3 +1,54 @@
+.container {
+    width: 1440px;
+    height: 630px;
+    flex-shrink: 0;
+    background: #F6EEFC;
+    background-size: cover;
+}
+
 h2 {
-    text-align: center;
+    width: 511px;
+    height: auto;
+    color: #000;
+    font-family: Roobert;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px;
+    text-align: left;
+}
+
+.container p {
+    width: 434px;
+    height: auto;
+    color: #000;
+    font-family: Roobert;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+button {
+    border-radius: 32px;
+    border: 2px solid #7622D7;
+    background: #7622D7;
+    color: #FFFFFF;
+}
+
+.container-statistics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: white;
+    background-size: cover;
+}
+
+.container-statistics p {
+    font-family: Roobert;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
 }
