@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './style.css';
+import '../../global.css';
 
 export const HeroAssessmentTest = () => {
   return (
@@ -21,7 +22,7 @@ export const HeroAssessmentTest = () => {
         </div>
 
         <div className="container-heroAssessmentTest__text">
-          <img src="img/magnify.png.png" alt="magnify" />
+          <img src="img/magnify.png" alt="magnify" />
           <div className="container-heroAssessmentTest__text-content">
             <h3>Company assesment test</h3>
             <p>

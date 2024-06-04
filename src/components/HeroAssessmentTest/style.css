@@ -5,9 +5,9 @@
 }
 
 .container-heroAssessmentTest h3 {
+  font-family: 'Roobert';
   color: #FFFFFF;
   text-align: center;
-  font-family: Roobert;
   font-size: 36px;
   font-weight: 500;
   line-height: 48px;
@@ -16,6 +16,7 @@
 }
 
 .container-heroAssessmentTest__linked {
+  font-family: 'Roobert';
   font-size: 18px;
   line-height: 24px;
   display: flex;
@@ -42,6 +43,7 @@
 }
 
 .container-heroAssessmentTest__text-content {
+  font-family: 'Roobert';
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -56,7 +58,7 @@ button {
 }
 
 .container-heroAssessmentTest__text h3 {
-  font-family: Roobert;
+  font-family: 'Roobert';
   font-size: 28px;
   font-weight: 500;
   line-height: 32px;
@@ -65,7 +67,7 @@ button {
 }
 
 .container-heroAssessmentTest__text p {
-  font-family: Roobert;
+  font-family: 'Roobert';
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
