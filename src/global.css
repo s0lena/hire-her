@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-family: 'Poppins', sans-serif;
-}
+} */
 
-.container {
+/* .container {
   max-width: 100vw;
   margin-right: auto;
   margin-left: auto;
@@ -25,7 +25,6 @@ body {
 }
 
 h2 {
-  text-align: center;
   font-size: 50px;
   height: 50vh;
-}
+} */

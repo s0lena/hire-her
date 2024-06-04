@@ -1,0 +1,84 @@
+.container-heroAssessmentTest {
+  background: #7622D7;
+  background-size: cover;
+  padding: 100px
+}
+
+.container-heroAssessmentTest h3 {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Roobert;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.20000000298023224px;
+  margin-top: 0px;
+}
+
+.container-heroAssessmentTest__linked {
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.container-heroAssessmentTest__text {
+  background-color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.container-heroAssessmentTest__text img {
+  max-width: 300px;
+  max-height: 300px;
+  flex-shrink: 0;
+}
+
+.container-heroAssessmentTest__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.container-heroAssessmentTest__text h3,
+p,
+button {
+  color: black;
+}
+
+.container-heroAssessmentTest__text h3 {
+  font-family: Roobert;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.20000000298023224px;
+  max-width: 100%;
+}
+
+.container-heroAssessmentTest__text p {
+  font-family: Roobert;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.44999998807907104px;
+  max-width: 100%;
+}
+
+.container-heroAssessmentTest__text button {
+  background-color: white;
+  padding: 16px 32px 16px 32px;
+  gap: 0px;
+  border-radius: 32px;
+  border: 2px solid black;
+  opacity: 1;
+  align-self: flex-start;
+}
