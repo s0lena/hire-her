@@ -13,7 +13,7 @@ export const Footer = () => {
             <div className="social-media__row">
               <img
                 className="icon"
-                src="icons/facebook.svg"
+                src="/facebook.svg"
                 alt="facebook logo"
                 width="20"
               />
@@ -22,7 +22,7 @@ export const Footer = () => {
             <div className="social-media__row">
               <img
                 className="icon"
-                src="icons/instagram.svg"
+                src="/instagram.svg"
                 alt="instagram logo"
                 width="20"
               />
@@ -31,7 +31,7 @@ export const Footer = () => {
             <div className="social-media__row">
               <img
                 className="icon"
-                src="icons/linkedin.svg"
+                src="/linkedin.svg"
                 alt="linkedin logo"
                 width="20"
               />
