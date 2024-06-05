@@ -10,6 +10,7 @@ export const App = () => {
     <>
       <Header />
       <Outlet />
+      <Footer />
     </>
   );
 };

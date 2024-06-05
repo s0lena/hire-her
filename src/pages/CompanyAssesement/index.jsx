@@ -1,3 +1,11 @@
+import { CompanyAssesementHero } from '../../components/CompanyAssesementHero'
+import {Test} from '../../components/Test'
+
 export const CompanyAssessement = () => {
-    return (<h2>"Hi I`m CompanyAssesement Section"</h2>)
+    return (
+    <>
+    <CompanyAssesementHero />
+    <Test />
+    </>
+    )
 }
