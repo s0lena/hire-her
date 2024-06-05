@@ -12,7 +12,6 @@ export const HomePage = () => {
       <HeroAssessmentTest />
       <HeroGrowTogether />
       <HeroSplit />
-      <Footer />
     </div>
   );
 };
