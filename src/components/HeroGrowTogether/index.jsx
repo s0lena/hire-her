@@ -16,7 +16,7 @@ export const HeroGrowTogether = () => {
           </p>
           <button>See how you can include them</button>
         </div>
-        <img src="img/growTogether.png" alt="women" />
+        <img src="/growTogether.png" alt="women" />
       </div>
     </>
   );

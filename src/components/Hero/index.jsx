@@ -1,3 +1,4 @@
+import React from 'react';
 import './style.css';
 import '../../global.css';
 
@@ -13,7 +14,7 @@ export const Hero = () => {
           </p>
           <button>Find out more</button>
         </div>
-        <img src="img/women.png" alt="women" />
+        <img src="/women.png" alt="women" />
       </div>
 
       <div className="container-statistics">

@@ -22,7 +22,7 @@ export const HeroAssessmentTest = () => {
         </div>
 
         <div className="container-heroAssessmentTest__text">
-          <img src="img/magnify.png" alt="magnify" />
+          <img src="/magnify.png" alt="magnify" />
           <div className="container-heroAssessmentTest__text-content">
             <h3>Company assesment test</h3>
             <p>
