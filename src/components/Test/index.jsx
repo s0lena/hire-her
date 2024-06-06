@@ -1,6 +1,7 @@
 // Import Swiper React components
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { HeroSplit } from '../../components/HeroSplit';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,18 +26,32 @@ export const Test =()=> {
 
     return (
       <>
-     {isSubmitted? (<div><SwiperSlide>
+     {isSubmitted? (
+      <>
       <div className="test-results-section">
+        <Swiper
+          
+          modules={[Pagination]}
+          pagination={{
+            type: 'progressbar',
+          }}
+         className="swiper"
+        >
+        <SwiperSlide>
           <h3>Results</h3>
+          <div className="test-results-section-text">
             <h4>100-75% Cool!</h4>
-                     <div>How to improve</div>
-                <button>Find out more</button>
-      </div>
-            
-  
-          </SwiperSlide></div>):
+                <div>How to improve</div>
+                <button className="button-transparent"><a href="#herosplit">Find out more</a></button>
+          </div>
+          </SwiperSlide>
+          </Swiper>
+          </div>
+          <HeroSplit id="herosplit"/> 
+        </>
+        ):
 
-      (<div className="test-questions">
+      (<div className="test-questions" id="test">
         <Swiper
           grabCursor={true}
           effect={'creative'}
@@ -98,7 +113,7 @@ export const Test =()=> {
                 <div className="input"><input type="radio" value="option2" name="answer" id="option2"/><label htmlFor="option2">Answer1</label></div>
                 <div className="input"><input type="radio" value="option3" name="answer" id="option3"/><label htmlFor="option3">Answer2</label></div>
                 <div className="input"><input type="radio" value="option4" name="answer" id="option4"/><label htmlFor="option4">Answer3</label></div>
-                  <button className="test-result-button" onClick={handleSubmit}>See results</button>
+                  <button className="button-transparent" onClick={handleSubmit}>See results</button>
               </div>
             </fieldset>
           </form>

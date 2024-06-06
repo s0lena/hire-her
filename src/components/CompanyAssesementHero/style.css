@@ -54,6 +54,9 @@
     font-size: 16px;
 }
 
+.container-hero__text button a {
+    color: #FFFFFF;
+}
 
 .container-hero-test img {
     width: 460px;

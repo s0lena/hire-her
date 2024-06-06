@@ -5,7 +5,7 @@ import '../../global.css';
 export const HeroSplit = () => {
   return (
     <>
-      <div className="container-heroSplit">
+      <div className="container-heroSplit" id="herosplit">
         <div className="container-heroSplit__employee">
           <h3>
             Coming back to work after parental <br></br>

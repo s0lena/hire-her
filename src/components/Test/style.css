@@ -46,6 +46,10 @@
     height: 47px;
   }
 
+  .answer-section {
+    position: relative;
+  }
+
   .swiper-slide input {
     font-weight: 100;
     font-size: 28px;
@@ -96,8 +100,12 @@
   }
 
   /* Test results */
-
   .test-results-section {
+    font-family: 'Roobert';
+    background-color: #7622D7;
+    height: 100vh;  
+ }
+  .test-results-section-text {
     background-color: #F1E9FB;
     height: 450px;
     width: 1088px;
@@ -107,7 +115,24 @@
     flex-direction: column;
     padding-left: 67px;
     padding-top: 72px;
+    position: relative;  
   }
 
+  .test-results-section-text h4 {
+    margin: 0;
+    height: 47px;
+  }
 
-  
+  .button-transparent {
+    width: fit-content;
+    padding: 0 30px;
+    height: 52px;
+    border: 3px solid black;
+    border-radius: 32px;
+    background-color: #F1E9FB;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 164px;
+  }
+
