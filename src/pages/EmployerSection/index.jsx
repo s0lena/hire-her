@@ -1,5 +1,6 @@
 import './style.css';
 import '../../global.css';
+import { EmployerSectionTwo } from '../../components/EmployerSectionTwo';
 
 export const EmployerSection = () => {
   return (
@@ -17,6 +18,7 @@ export const EmployerSection = () => {
           <img src="/blue-icon-woman.png" alt="Woman Icon" />
         </div>
       </div>
+      <EmployerSectionTwo />
     </>
   );
 };

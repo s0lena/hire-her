@@ -12,7 +12,7 @@ export const CompanyAssesementHero = () => {
           </p>
           <button><a href="#test">Start the test</a></button>
         </div>
-        <img src="/magnify.png" alt="test" />
+        <img src="/magnify.svg" alt="test" />
       </div>
     </>
   );
