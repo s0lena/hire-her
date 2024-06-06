@@ -1,8 +1,10 @@
 .container-hero-test {
     display: flex;
     flex-shrink: 0;
+    flex-wrap: wrap;
     background: #F6EEFC;
     background-size: cover;
+    justify-content: space-between;
     padding-left: 200px;
 }
 
@@ -53,7 +55,10 @@
 }
 
 
-img {
+.container-hero-test img {
     width: 460px;
-    height: 390px;
+    height: fit-content;
+    max-width: 40vw;
+    margin-left: 88px;
+    margin-top: 70px;
 }
