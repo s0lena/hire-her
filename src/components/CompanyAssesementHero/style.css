@@ -55,7 +55,7 @@
 }
 
 
-img {
+.container-hero-test img {
     width: 460px;
     height: fit-content;
     max-width: 40vw;
