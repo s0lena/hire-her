@@ -89,8 +89,13 @@
     background-color: #F1E9FB;
     font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
   }
   
+  .swiper-button-next:hover {
+    background-color: #ffffff;
+  }
+
   .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background-color: #CAFAD9;
   }
@@ -134,5 +139,9 @@
     font-weight: bold;
     position: fixed;
     bottom: 164px;
+    cursor: pointer;
   }
 
+  .button-transparent:hover {
+    background-color: #ffffff;
+  }

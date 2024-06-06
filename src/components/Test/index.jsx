@@ -42,7 +42,7 @@ export const Test =()=> {
           <div className="test-results-section-text">
             <h4>100-75% Cool!</h4>
                 <div>How to improve</div>
-                <button className="button-transparent"><a href="#herosplit">Find out more</a></button>
+                <a href="#herosplit"><button className="button-transparent">Find out more</button></a>
           </div>
           </SwiperSlide>
           </Swiper>

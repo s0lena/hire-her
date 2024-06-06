@@ -44,11 +44,12 @@
   height: 52px;
   border: 2px solid #7622D7;
   background: #7622D7;
-  color: #FFFFFF;
   margin-left: 24px;
   margin-bottom: 106.5px;
   font-family: 'Roobert';
   font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .container-employerSection__image img {
@@ -57,3 +58,9 @@
   margin-left: 88px;
   margin-top: 20px;
 }
+
+.container-employerSection__text button:hover {
+  background:#9764d1;
+  border: 2px solid #9764d1;
+}
+

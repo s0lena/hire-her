@@ -12,7 +12,7 @@ export const EmployerSection = () => {
             Effective inclusion will bring you measurable and positive impacts
             on the culture, finances and performance of your company.
           </p>
-          <button>Find out more</button>
+          <a href="#employersection_two"><button>Find out more</button></a>
         </div>
         <div className="container-employerSection__image">
           <img src="/blue-icon-woman.png" alt="Woman Icon" />

@@ -54,6 +54,11 @@
     font-size: 16px;
 }
 
+.container-hero__text button:hover {
+    background:#9764d1;
+    border: 2px solid #9764d1;
+}
+
 .container-hero__text button a {
     color: #FFFFFF;
 }
