@@ -12,27 +12,27 @@
     justify-content: center;
 }
 
-h2 {
+.container-hero__text h2 {
     color: #000;
     font-family: "Roobert";
-    font-size: 30px;
+    font-size: 56px;
     font-style: normal;
     font-weight: 500;
-    line-height: 30px;
-    max-width: 50%;
+    line-height: 61px;
+    max-width: 100%;
     padding-left: 24px;
     font-weight: bold;
 
 }
 
-.container-hero p {
+.container-hero__text p {
     font-family: "Roobert";
-    font-size: 20px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
     display: flex;
-    max-width: 50%;
+    max-width: 100%;
     margin-left: 24px;
 }
 
@@ -49,23 +49,41 @@ h2 {
 }
 
 .container-statistics {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: white;
     background-size: cover;
     justify-content: space-evenly;
-
+    align-items: center;
 }
 
-.container-statistics p {
+.statistic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 16px;
+}
+
+.percentage {
     font-family: "Roobert";
-    font-size: 18px;
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.percentage-text {
+    font-family: "Roobert";
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-
-
+    margin: 0;
 }
+
+
 
 img {
     width: 460px;
