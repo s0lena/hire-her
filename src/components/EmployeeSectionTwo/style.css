@@ -1,0 +1,53 @@
+.container-employeeSection__partTwo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 50px 100px;
+}
+
+.container-employeeSection__textPartTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+}
+
+.container-employeeSection__textPartTwo h2 {
+  max-width: 600px;
+  color: #000;
+  font-family: "Roobert";
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.container-employeeSection__textPartTwo p {
+  font-family: "Roobert";
+  max-width: 502px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-left: 24px;
+  margin-top: 16px;
+}
+
+.container-employeeSection__textPartTwo button {
+  border-radius: 32px;
+  width: 166px;
+  height: 52px;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  margin-left: 24px;
+  margin-top: 24px;
+  font-family: 'Roobert';
+  cursor: pointer;
+}
+
+.container-employeeSection__image img {
+  width: 390px;
+  height: 390px;
+}

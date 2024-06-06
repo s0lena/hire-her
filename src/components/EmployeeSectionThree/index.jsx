@@ -4,8 +4,8 @@ import '../../global.css';
 export const EmployeeSectionThree = () => {
   return (
     <>
-      <div className="container-employeeSection">
-        <div className="container-employeeSection__text">
+      <div className="container-employeeSection__partThree">
+        <div className="container-employeeSection__textPartThree">
           <h2>Explore how we can assist you</h2>
           <p>
             Are you going through professional or work- related changes? Are you
