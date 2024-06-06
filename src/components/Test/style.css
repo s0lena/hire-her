@@ -95,7 +95,19 @@
     border: none;
   }
 
+  /* Test results */
 
+  .test-results-section {
+    background-color: #F1E9FB;
+    height: 450px;
+    width: 1088px;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    flex-direction: column;
+    padding-left: 67px;
+    padding-top: 72px;
+  }
 
 
   
