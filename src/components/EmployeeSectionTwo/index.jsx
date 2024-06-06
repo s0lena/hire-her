@@ -4,8 +4,11 @@ import '../../global.css';
 export const EmployeeSectionTwo = () => {
   return (
     <>
-      <div className="container-employeeSection">
-        <div className="container-employeeSection__text">
+      <div className="container-employeeSection__partTwo">
+        <div className="container-employeeSection__image">
+          <img src="/woman-with-dog.png" alt="WomanAndDog" />
+        </div>
+        <div className="container-employeeSection__textPartTwo">
           <h2>
             Returning from maternity leave can be challenging, but with our
             support, you'll overcome it
@@ -17,9 +20,6 @@ export const EmployeeSectionTwo = () => {
             while remaining a caring parent.
           </p>
           <button>Find out more</button>
-        </div>
-        <div className="container-employeeSection__image">
-          <img src="/woman-with-dog.png" alt="WomanAndDog" />
         </div>
       </div>
     </>
