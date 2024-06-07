@@ -8,13 +8,17 @@ export const CompanyAssesementHero = () => {
         <div className="container-hero__text">
           <h2>Test your company</h2>
           <p>
-          Evaluate how supportive and work-life balance-friendly your company is, and learn how to improve it. This assessment will help you review your workplace policies and culture to better support employees managing work and family commitments. 
+            Evaluate how supportive and work-life balance-friendly your company
+            is, and learn how to improve it. This assessment will help you
+            review your workplace policies and culture to better support
+            employees managing work and family commitments.
           </p>
-          <button><a href="#test">Start the test</a></button>
+          <button className="container-hero__button">
+            <a href="#test">Start the test</a>
+          </button>
         </div>
         <img src="/magnify.svg" alt="test" />
       </div>
     </>
   );
 };
-
