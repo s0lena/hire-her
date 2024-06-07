@@ -45,6 +45,17 @@
  width: 175px;
 }
 
+/*Interview*/ 
+
+.interview {
+    height: 100vh; 
+    overflow-y: scroll; 
+}
+
+.interview::-webkit-scrollbar {
+    display: none;
+  }
+
 .question-container {
     display: flex;
     flex-direction: column;
