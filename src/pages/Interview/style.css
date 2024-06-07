@@ -1,0 +1,127 @@
+.container-interview-simulator {
+    font-family: "Roobert";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.container-interview-simulator h1 {
+    font-size: 56px;
+    line-height: 61px;
+    margin-top: 38px;
+    margin-left: 0;
+    margin-bottom: 16px;
+}
+
+.container-interview-simulator p {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 38px;
+}
+
+.container-interview-simulator button {
+    border-radius: 32px;
+    width: 166px;
+    height: 52px;
+    border: 2px solid #7622D7;
+    background: #7622D7;
+    margin-left: 24px;
+    margin-bottom: 105px;
+    font-family: 'Roobert';
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.container-interview-simulator button:hover {
+    background:#9764d1;
+    border: 2px solid #9764d1;
+}
+
+.interview-characters-container img {
+ height: 444px;
+ width: 175px;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hr-question {
+    max-width: 518px;
+    background-color: #EFEFEF;
+    font-size: 20px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 78px;
+}
+
+.hr-question img {
+    width: 100px;
+    height: fit-content;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.interview-reply {
+    width: 518px;
+    background-color: #E5D5F7;
+    border: 2px solid #7622D7;
+    font-size: 20px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 78px;
+}
+
+.hr-question p, .man-reply p, .woman-reply p, .interview-reply p {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.columns-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.columns-2 .hr-question {
+    width: 350px;
+}
+
+.interview-replies {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+}
+
+.man-reply {
+    width: 350px;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #F4EDFC;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 78px;
+}
+
+.woman-reply {
+    width: 350px;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #E5D5F7;
+    border: 2px solid #7622D7;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 78px;
+}
+
