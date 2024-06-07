@@ -4,14 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { HeroSplit } from '../../components/HeroSplit';
 import { TestResults } from '../TestResults';
 
-// Import Swiper štýlov
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import 'swiper/css/pagination';
 
 import './style.css';
 
-// importovanie požadovaných modulov
+// import required moduls
 import { EffectCreative } from 'swiper/modules';
 import { Navigation } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
@@ -37,7 +37,7 @@ export const Test = () => {
     const nextQuestionIndex = currentQuestion + 1;
     if (nextQuestionIndex < questions.length) {
       setCurrentQuestion(nextQuestionIndex);
-      setSelectedOption(null); // Reset selected option for the next question
+      setSelectedOption(null);
       slideToQuestion(nextQuestionIndex);
     } else {
       setIsSubmitted(true);
