@@ -1,67 +1,52 @@
 .container-hero-test {
     display: flex;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    background: #F6EEFC;
-    background-size: cover;
+    align-items: center;
     justify-content: space-between;
-    padding-left: 200px;
+    background-color: #F6EEFC;
+    padding: 50px 100px;
 }
 
-.container-hero__text {
+.container-hero-test {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 
-.container-hero-test h2 {
+.container-hero__text h2 {
+    max-width: 600px;
     color: #000;
     font-family: "Roobert";
     font-size: 56px;
-    font-weight: 500;
-    max-width: 50%;
-    padding-left: 24px;
     font-weight: bold;
     line-height: 61px;
-    margin-top: 112px;
-    margin-bottom: 31px;
-
+    padding-left: 24px;
+    margin: 0;
 }
 
-.container-hero-test p {
+.container-hero__text p {
     font-family: "Roobert";
+    max-width: 502px;
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 30px;
-    display: flex;
-    width: 556px;
-    margin-left: 24px;
-    margin-bottom: 55px;
-    
+    line-height: 1.5;
+    margin-left: 30px;
+    margin-top: 16px;
 }
 
-.container-hero__text button {
+.container-hero__button {
     border-radius: 32px;
     width: 166px;
     height: 52px;
     border: 2px solid #7622D7;
     background: #7622D7;
-    color: #FFFFFF;
+    color: white;
     margin-left: 24px;
-    margin-bottom: 106.5px;
+    margin-top: 24px;
     font-family: 'Roobert';
-    font-size: 16px;
-}
-
-.container-hero__text button a {
-    color: #FFFFFF;
+    cursor: pointer;
 }
 
 .container-hero-test img {
     width: 460px;
-    height: fit-content;
-    max-width: 40vw;
-    margin-left: 88px;
-    margin-top: 70px;
+    height: 460px;
 }
