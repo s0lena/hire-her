@@ -49,6 +49,13 @@ export const Test = () => {
     navigateToNextQuestion();
   };
 
+  const getPercentage = () => {
+    const maxPointsPerQuestion = 3;
+    const maxScore = questions.length * maxPointsPerQuestion;
+    const percentage = (score / maxScore) * 100;
+    return percentage;
+  };
+
   const isLastQuestion = currentQuestion === questions.length - 1;
 
   return (
@@ -61,16 +68,7 @@ export const Test = () => {
               pagination={{ type: 'progressbar' }}
               className="swiper"
             >
-              <SwiperSlide>
-                <h3>Results</h3>
-                <div className="test-results-section-text">
-                  <h4>100-75% Cool!</h4>
-                  <div>How to improve</div>
-                  <button className="button-transparent">
-                    <a href="#herosplit">Find out more</a>
-                  </button>
-                </div>
-              </SwiperSlide>
+              <TestResults percentage={getPercentage()} />
             </Swiper>
           </div>
           <HeroSplit id="herosplit" />

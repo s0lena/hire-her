@@ -1,11 +1,11 @@
-import { CompanyAssesementHero } from '../../components/CompanyAssesementHero'
-import {Test} from '../../components/Test'
+import { CompanyAssesementHero } from '../../components/CompanyAssesementHero';
+import { Test } from '../../components/Test';
 
 export const CompanyAssessement = () => {
-    return (
+  return (
     <>
-    <CompanyAssesementHero />
-    <Test />
+      <CompanyAssesementHero />
+      <Test />
     </>
-    )
-}
+  );
+};
