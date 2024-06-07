@@ -32,7 +32,7 @@ export const Interview = () => {
             }
             else {
                 return (
-                    <>
+                    <div key={bok.id}>
                     <div className="columns-2">
                     <div className="hr-question">
                         <img src="/interviewer.png" />
@@ -52,7 +52,7 @@ export const Interview = () => {
                         <p>{bok.answer_man}</p>
                         </div>
                    </div>
-                   </>
+                   </div>
                   
                 )
             }
