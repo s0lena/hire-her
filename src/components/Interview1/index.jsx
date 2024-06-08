@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import InterviewData from '../../source/interview-data'
 import { motion, useAnimation } from 'framer-motion';
 
-export const Interview = () => {
+
+export const Interview1 = () => {
     const [isButtonClicked, setIsButtonClicked] = useState(false);
     const controls = useAnimation();
     const controls2 = useAnimation();
@@ -26,28 +27,24 @@ export const Interview = () => {
     <div className="container-interview-simulator">
         <h1>Try out our job interview simulator</h1>
         <p>And prep yourself for the toughest questions</p>
-        <a href="#interview"><button onClick={() => setTimeout(setIsButtonClicked(true),3000)} >Start interview</button></a>
+        <a href="#interview"><button onClick={() => setTimeout(setIsButtonClicked(true),3000)}>Start interview</button></a>
     <div className="interview-characters-container">
-        <motion.img
-        src="/man.svg"
-        alt="man"
-        initial={{ x: '0vw', opacity: 1 }}
-        animate={controls2}
-        transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-        />
-        <motion.img
-            src="/woman.svg"
-            alt="woman"
-            initial={{ x: '0vw', opacity: 1 }}
-            animate={controls}
-            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-        />
-        <div className="characters-static">
-            <img src="/man.svg" alt="man" className="character-static"/>
-            <img src="/woman.svg" alt="woman" className="character-static"/>
-        </div>
+    <motion.img
+    src="/man.svg"
+    alt="man"
+    initial={{ x: '0vw', opacity: 1 }}
+    animate={controls2}
+    transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+  />
+  <motion.img
+    src="/woman.svg"
+    alt="woman"
+    initial={{ x: '0vw', opacity: 1 }}
+    animate={controls}
+    transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+  />
     </div>
-        
+    
     <div className="interview" id="interview">
     {InterviewData.map((bok)=>{
             if (bok.question_man===bok.question_woman) {
