@@ -1,9 +1,11 @@
+/* Base styles (already provided) */
+
 .container-hero {
     display: flex;
     flex-shrink: 0;
     background: #F6EEFC;
     background-size: cover;
-    padding: 100px
+    padding: 100px;
 }
 
 .container-hero__text {
@@ -22,7 +24,6 @@
     max-width: 100%;
     padding-left: 24px;
     font-weight: bold;
-
 }
 
 .container-hero__text p {
@@ -84,9 +85,65 @@
     margin: 0;
 }
 
-
-
 img {
     width: 460px;
     height: 390px;
+}
+
+/* Media query for mobile devices with min width of 360px */
+@media (max-width: 360px) {
+    .container-hero {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .container-hero img {
+        order: -1;
+        width: 100%;
+        height: auto;
+    }
+
+    .container-hero__text {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .container-hero__text h2 {
+        font-size: 32px;
+        line-height: 40px;
+        padding-left: 0;
+    }
+
+    .container-hero__text p {
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 0;
+    }
+
+    .container-hero__text button {
+        width: 140px;
+        height: 44px;
+        margin-left: 30px;
+    }
+
+    .container-statistics {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .statistic {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .percentage {
+        font-size: 36px;
+    }
+
+    .percentage-text {
+        font-size: 14px;
+    }
 }

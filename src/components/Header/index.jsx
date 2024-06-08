@@ -5,14 +5,23 @@ import { useState } from 'react';
 
 export const Header = () => {
   const [active, setActive] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (link) => {
     setActive(link);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    console.log(setMenuOpen);
+  };
+
   return (
     <header>
       <h1>Hire Her</h1>
+      <button className="hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
       <nav>
         <Link
           to="/"

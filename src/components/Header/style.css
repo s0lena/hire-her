@@ -34,3 +34,28 @@ a.active {
     font-weight: bold;
     color: #7622D7;
 }
+
+@media (max-width: 360px) {
+    .hamburger {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.menu-open {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    nav span {
+        display: none;
+    }
+}
