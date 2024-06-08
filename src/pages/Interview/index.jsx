@@ -84,7 +84,7 @@ export const Interview = () => {
                         <p>{bok.answer_man}</p>
                         </div>
                         <div className="woman-reply">
-                        <p>{bok.answer_man}</p>
+                        <p>{bok.answer_woman}</p>
                         </div>
                    </div>
                    </motion.div>
