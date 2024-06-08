@@ -1,6 +1,6 @@
 import './style.css';
 import { useState, useEffect } from 'react';
-import InterviewData from '../../source/interview-data';
+import InterviewData from '../../source/interview-woman';
 import { motion, useAnimation } from 'framer-motion';
 
 export const Interview = () => {
@@ -62,11 +62,14 @@ export const Interview = () => {
                 transition={{ duration: 5, delay: 0.2, ease: 'easeInOut' }}
               >
                 <div className="hr-question">
-                  <p>{bok.question_man}</p>
+                  <p>{bok.question_woman}</p>
+                  <img src="/speachbubble-tail.svg" alt="speachbubble-tail" />
                 </div>
-                <div className="interview-reply">
-                  <p> {bok.answer_man}</p>
-                </div>
+                {bok.answers.map((answer)=>
+                <div className="interview-reply" key={answer.color}>
+                  <p> {answer.answerText}</p>
+                  
+                </div>)}
               </motion.div>
             );
           })}

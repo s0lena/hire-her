@@ -72,15 +72,25 @@
 
 .hr-question {
     width: 345px;
-    background-image: url('speach-bubble.svg');
-    background-repeat: no-repeat;
-    background-size: 345px 225px;
+    background-color: #EFEFEF;
     font-size: 20px;
+    display: flex;
     border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
     padding: 25px;
-    padding-bottom: 128px;
     margin-bottom: 78px;
+    position: relative;
 
+}
+
+/* spaechbubble tail */
+
+.hr-question img {
+    position: absolute;
+    bottom: -180px;
+    width:99px;
+    left: -50px;
 }
 
 /* .hr-question img {
@@ -92,23 +102,31 @@
 
 .hr-question p {
     width: 231px;
-    margin-left: 60px;
 }
 
 .interview-reply {
-    width: 518px;
-    background-color: #E5D5F7;
-    border: 2px solid #7622D7;
+    width: 542px;
+    background-color: #F4EDFC;
     font-size: 20px;
     display: flex;
     border-radius: 20px;
     justify-content: space-between;
     align-items: center;
     padding: 25px;
-    margin-bottom: 78px;
+    margin-bottom: 25px;
 }
 
-.hr-question p, .man-reply p, .woman-reply p, .interview-reply p {
+.interview-reply:hover {
+    background-color: #E5D5F7;
+    border: 2px solid #7622D7;
+}
+
+.interview-reply p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.hr-question p, .man-reply p, .woman-reply p {
     margin-bottom: 0;
     font-size: 20px;
 }
