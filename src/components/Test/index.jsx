@@ -86,7 +86,7 @@ export const Test = () => {
             className="swiper"
           >
             {questions.map((question, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="swiper-no-swiping">
                 <h3>
                   {index + 1}. {question.questionText}
                 </h3>
