@@ -21,7 +21,10 @@ export const HeroAssessmentTest = () => {
           </Link>
         </div>
 
-        <div className="container-heroAssessmentTest__text">
+        <div
+          id="heroAssesmentTest"
+          className="container-heroAssessmentTest__text"
+        >
           <img src="/magnify.png" alt="magnify" />
           <div className="container-heroAssessmentTest__text-content">
             <h3>Company assesment test</h3>
@@ -33,7 +36,9 @@ export const HeroAssessmentTest = () => {
               strategies to create a more inclusive and equitable environment
               for everyone.
             </p>
-            <button>Start the test</button>
+            <a href="/test-your-company">
+              <button>Start the test</button>
+            </a>
           </div>
         </div>
       </div>

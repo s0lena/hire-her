@@ -12,7 +12,9 @@ export const Hero = () => {
             Helping companies and women find a common balance and efficient
             collaboration for a seamless return to the work environment.
           </p>
-          <button>Find out more</button>
+          <a href="#heroAssesmentTest">
+            <button>Find out more</button>
+          </a>
         </div>
         <img src="/women.png" alt="women" />
       </div>
