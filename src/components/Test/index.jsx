@@ -63,13 +63,7 @@ export const Test = () => {
       {isSubmitted ? (
         <>
           <div className="test-results-section">
-            <Swiper
-              modules={[Pagination]}
-              pagination={{ type: 'progressbar' }}
-              className="swiper"
-            >
-              <TestResults percentage={getPercentage()} />
-            </Swiper>
+            <TestResults percentage={getPercentage()} />
           </div>
           <HeroSplit id="herosplit" />
         </>
@@ -105,9 +99,9 @@ export const Test = () => {
                             type="radio"
                             id={`question${index}_option${i}`}
                             name={`question${index}`}
-                            value={option.points}
-                            checked={selectedOption === option.points}
-                            onChange={() => setSelectedOption(option.points)}
+                            value={i}
+                            checked={selectedOption === i}
+                            onChange={() => setSelectedOption(i)}
                           />
                           <label htmlFor={`question${index}_option${i}`}>
                             {option.answerText}
@@ -117,7 +111,11 @@ export const Test = () => {
                       <button
                         type="button"
                         className="button-transparent"
-                        onClick={() => handleAnswerOptionClick(selectedOption)}
+                        onClick={() =>
+                          handleAnswerOptionClick(
+                            question.options[selectedOption].points,
+                          )
+                        }
                         disabled={selectedOption === null}
                       >
                         {isLastQuestion ? 'See results' : 'Next'}
