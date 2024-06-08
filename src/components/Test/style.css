@@ -58,8 +58,7 @@
 .answer-section .input {
   display: flex;
   align-items: center;
-  height: 47px;
-  margin-bottom: 30px;
+  min-height: 47px;
 }
 
 .answer-section label {
@@ -77,6 +76,7 @@
   margin-right: 10px;
   vertical-align: middle;
   max-width: 30px;
+  cursor:pointer;
 }
 
 /* Checked input styling */
@@ -126,11 +126,14 @@
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 1088px;
+  height: 450px;
   max-width: 800px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  cursor:pointer;
 }
 
 /* Results header */
@@ -152,6 +155,8 @@
   cursor: pointer;
   color: #7622D7;
   text-decoration: none;
+  position: absolute;
+  bottom: 76px;
 }
 
 .button-transparent:disabled {

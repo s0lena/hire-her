@@ -13,9 +13,9 @@ export const CompanyAssesementHero = () => {
             review your workplace policies and culture to better support
             employees managing work and family commitments.
           </p>
-          <button className="container-hero__button">
-            <a href="#test">Start the test</a>
-          </button>
+          
+            <a href="#test"><button className="container-hero__button">Start the test</button></a>
+          
         </div>
         <img src="/magnify.svg" alt="test" />
       </div>

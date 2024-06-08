@@ -34,16 +34,17 @@
 }
 
 .container-hero__button {
-    border-radius: 32px;
-    width: 166px;
-    height: 52px;
-    border: 2px solid #7622D7;
-    background: #7622D7;
-    color: white;
-    margin-left: 24px;
-    margin-top: 24px;
-    font-family: 'Roobert';
-    cursor: pointer;
+  border-radius: 32px;
+  width: 166px;
+  height: 52px;
+  border: 2px solid #7622D7;
+  background: #7622D7;
+  margin-left: 24px;
+  margin-bottom: 106.5px;
+  font-family: 'Roobert';
+  font-size: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .container-hero-test img {
