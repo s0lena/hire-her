@@ -59,12 +59,14 @@
   display: flex;
   align-items: center;
   height: 47px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .answer-section label {
   font-size: 20px;
   margin-left: 10px;
+  max-width: 900px;
+  line-height: 1.5;
 }
 
 /* Input styling */
@@ -74,6 +76,7 @@
   width: 30px;
   margin-right: 10px;
   vertical-align: middle;
+  max-width: 30px;
 }
 
 /* Checked input styling */
