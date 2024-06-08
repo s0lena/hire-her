@@ -12,7 +12,7 @@ export const Header = () => {
 
   return (
     <header>
-      <h1>Hire Her</h1>
+      <img className="logo" src="/logo.svg"/>
       <nav>
         <Link
           to="/"

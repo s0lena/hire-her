@@ -18,7 +18,7 @@
   font-family: "Roobert";
   font-size: 56px;
   font-weight: 500;
-  max-width: 50%;
+ 
   padding-left: 24px;
   font-weight: bold;
   line-height: 61px;
@@ -64,3 +64,30 @@
   border: 2px solid #9764d1;
 }
 
+@media(max-width: 360px) {
+  .container-employerSection {
+    padding-left: 20px;
+    padding-right: 20px;
+    width:100vw;
+    flex-direction: column-reverse;
+    align-items:flex-start;
+  }
+  .container-employerSection__text p {
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 23px;
+  }
+  .container-employerSection__image img {
+    width: 154px;
+    height: 154px;
+    margin-top: 64px;
+    margin-left: 0;
+  }
+  .container-employerSection h2{ 
+    font-size: 28px;
+    line-height: 30px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+}

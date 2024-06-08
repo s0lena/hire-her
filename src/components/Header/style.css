@@ -34,3 +34,7 @@ a.active {
     font-weight: bold;
     color: #7622D7;
 }
+
+.logo {
+    margin-left: 120px;
+}
