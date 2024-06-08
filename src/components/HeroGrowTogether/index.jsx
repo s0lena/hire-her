@@ -14,7 +14,9 @@ export const HeroGrowTogether = () => {
             talking about moms. The opportunity to combine work and family is
             equally important for fathers.
           </p>
-          <button>See how you can include them</button>
+          <a href="/employee-section">
+            <button>See how you can include them</button>
+          </a>
         </div>
         <img src="/growTogether.png" alt="women" />
       </div>

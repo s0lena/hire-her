@@ -83,4 +83,5 @@ button {
   border: 2px solid black;
   opacity: 1;
   align-self: flex-start;
+  cursor: pointer;
 }

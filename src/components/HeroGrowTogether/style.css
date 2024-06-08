@@ -44,6 +44,7 @@
   height: 52.5px;
   background-color: #F1E8F9;
   margin-left: 24px;
+  cursor: pointer;
 }
 
 .container-heroGrowTogether img {
