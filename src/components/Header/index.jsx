@@ -9,11 +9,11 @@ export const Header = () => {
 
   const handleLinkClick = (link) => {
     setActive(link);
+    setMenuOpen(false);
   };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log(setMenuOpen);
   };
 
   return (
@@ -22,7 +22,7 @@ export const Header = () => {
       <button className="hamburger" onClick={toggleMenu}>
         ☰
       </button>
-      <nav>
+      <nav className={menuOpen ? 'menu-open' : ''}>
         <Link
           to="/"
           className={active === '/' ? 'active' : ''}
