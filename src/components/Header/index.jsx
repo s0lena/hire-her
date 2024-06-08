@@ -5,15 +5,24 @@ import { useState } from 'react';
 
 export const Header = () => {
   const [active, setActive] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (link) => {
     setActive(link);
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <header>
       <img className="logo" src="/logo.svg"/>
-      <nav>
+      <button className="hamburger" onClick={toggleMenu}>
+        ☰
+      </button>
+      <nav className={menuOpen ? 'menu-open' : ''}>
         <Link
           to="/"
           className={active === '/' ? 'active' : ''}

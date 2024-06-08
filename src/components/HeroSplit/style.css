@@ -65,3 +65,121 @@ a {
   text-decoration: none;
   margin-top: 10px;
 }
+
+
+
+@media (max-width: 360px) {
+  .container-heroSplit {
+    background: #AC7AE7;
+    background-size: cover;
+    padding: 100px;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+  }
+
+  .container-heroSplit__employee,
+  .container-heroSplit__employer {
+    width: 490px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .container-heroSplit__employee {
+    background-color: #FFE3EA;
+  }
+
+  .container-heroSplit__employer {
+    background-color: #85B0FF;
+  }
+
+  .container-heroSplit__employee h3,
+  .container-heroSplit__employer h3,
+  .container-heroSplit__employee p,
+  .container-heroSplit__employer p,
+  .container-heroSplit__employee ol,
+  .container-heroSplit__employer ol {
+    color: black;
+    font-family: "Roobert";
+    margin: 0;
+  }
+
+  .container-heroSplit__employee h3,
+  .container-heroSplit__employer h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  .container-heroSplit__employee p,
+  .container-heroSplit__employer p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+
+  .container-heroSplit__employee ol,
+  .container-heroSplit__employer ol {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 360px) {
+    .container-heroSplit {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .container-heroSplit__employee,
+    .container-heroSplit__employer {
+      width: 100%;
+      height: auto;
+      align-items: flex-start;
+      padding: 15px;
+    }
+
+    .container-heroSplit__employee h3,
+    .container-heroSplit__employer h3 {
+      font-size: 23px;
+      line-height: 28px;
+      text-align: flex-start;
+      padding-left: 10px;
+    }
+
+    .container-heroSplit__employee p,
+    .container-heroSplit__employer p {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: flex-start;
+      padding-left: 10px;
+    }
+
+    .container-heroSplit__employee ol,
+    .container-heroSplit__employer ol {
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 0;
+      text-align: flex-start;
+      padding-left: 10px;
+    }
+
+    a {
+      font-size: 16px;
+      text-align: flex-start;
+    }
+  }
+
+}

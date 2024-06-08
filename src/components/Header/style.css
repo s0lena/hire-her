@@ -38,3 +38,32 @@ a.active {
 .logo {
     margin-left: 120px;
 }
+
+@media (max-width: 360px) {
+    .hamburger {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.menu-open {
+        display: flex;
+        z-index: 50;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+
+    nav span {
+        display: none;
+    }
+}
