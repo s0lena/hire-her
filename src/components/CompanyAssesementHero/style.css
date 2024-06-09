@@ -3,13 +3,13 @@
     align-items: center;
     justify-content: space-between;
     background-color: #F6EEFC;
-    padding: 50px 100px;
+    padding: 112px 200px;
 }
 
 .container-hero-test {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
 }
 
 .container-hero__text h2 {

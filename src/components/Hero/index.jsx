@@ -21,7 +21,7 @@ export const Hero = () => {
 
       <div className="container-statistics">
         <div className="statistic">
-          <p className="percentage">56%</p>
+          <p className="percentage"><strong>56%</strong></p>
           <p className="percentage-text">
             <strong>of women </strong> find it hard to get back to work <br />{' '}
             after maternity leave
@@ -29,7 +29,7 @@ export const Hero = () => {
         </div>
 
         <div className="statistic">
-          <p className="percentage">77%</p>
+          <p className="percentage"><strong>77%</strong></p>
           <p className="percentage-text">
             <strong>of women</strong> can not get back to their <br /> previous
             jobs

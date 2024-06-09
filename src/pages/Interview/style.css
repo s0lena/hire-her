@@ -48,6 +48,10 @@
     opacity: 0.6;
 }
 
+.container-interview-simulator img {
+    margin-left: 0;
+}
+
 .interview-characters-container img {
     height: 444px;
     width: 175px;
