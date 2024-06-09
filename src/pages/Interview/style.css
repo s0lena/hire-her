@@ -124,7 +124,7 @@
     line-height: 19px;
 }
 
-.columns-2 {
+/* .columns-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -132,7 +132,7 @@
 
 .columns-2 .hr-question {
     width: 350px;
-}
+} */
 
 .interview-replies {
     display: flex;
@@ -140,7 +140,7 @@
     justify-content: center;
 }
 
-.man-reply {
+/* .man-reply {
     width: 350px;
     font-size: 20px;
     line-height: 30px;
@@ -148,4 +148,4 @@
     border-radius: 20px;
     padding: 25px;
     margin-bottom: 78px;
-}
+} */

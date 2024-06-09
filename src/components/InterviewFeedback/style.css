@@ -1,0 +1,22 @@
+.feedback {
+    width: 542px;
+    height: 80px;
+    border-radius: 20px;
+    padding: 25px 17px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.feedback-green {
+    background-color: #C7FFD7;  
+}
+
+.feedback-red {
+    background-color: #FFD2D2;  
+}
+
+.feedback-yellow {
+    background-color: #faf6b5;  
+}
+   
+
+   

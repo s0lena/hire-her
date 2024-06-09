@@ -1,17 +1,68 @@
-import './style.css';
-import { useState, useEffect } from 'react';
-import InterviewData from '../../source/interview-woman';
-import { motion, useAnimation } from 'framer-motion';
-import { InterviewBubble } from '../../components/InterviewBubble';
-import { InterviewAnswerForm } from '../../components/InterviewAnswerForm';
-import { InterviewEntry } from '../../components/InterveiwEntry';
+import "./style.css";
+import { useState, useEffect } from "react";
+import InterviewData from "../../source/interview-woman";
+import { motion, useAnimation } from "framer-motion";
+import { InterviewBubble } from "../../components/InterviewBubble";
+import { InterviewAnswerForm } from "../../components/InterviewAnswerForm";
+import { InterviewEntry } from "../../components/InterveiwEntry";
+
+const STATUS_INITIAL = "initial";
+const STATUS_SHOW_RESPONSES = "showResponses";
+const STATUS_TRY_AGAIN = "tryAgain";
+const STATUS_CONTINUE = "continue";
+const STATUS_FINISH = "finish";
 
 export const Interview = () => {
-  const [interviewStatus, setInterviewStatus] = useState('initial');
-  const controls = useAnimation();
-  const controls2 = useAnimation();
+  const [interviewStatus, setInterviewStatus] = useState(STATUS_INITIAL);
+  const animation1 = useAnimation();
+  const animation2 = useAnimation();
+  const [responses, setResponses] = useState([]);
+  const [currentResponses, setCurrentResponses] = useState([]);
+  const currentEntry = InterviewData[responses.length];
 
-  const [responses, setResponses] = useState([[2, 0], [0], []]);
+  const handleResponseSelected = (index) => {
+    const newResponses = [...currentResponses, index];
+    const reply = currentEntry.answers[index];
+
+    if (reply.color === "green") {
+      setCurrentResponses([]);
+      setResponses([...responses, newResponses]);
+      if (responses.length + 1 === InterviewData.length) {
+        setInterviewStatus("finish");
+      } else {
+        setInterviewStatus("continue");
+      }
+    } else {
+      setCurrentResponses(newResponses);
+      setInterviewStatus("tryAgain");
+    }
+  };
+
+  const handleContinue = () => {
+    setInterviewStatus(STATUS_SHOW_RESPONSES);
+  };
+
+  let controls = null;
+
+  if (interviewStatus === STATUS_SHOW_RESPONSES) {
+    controls = (
+      <InterviewAnswerForm
+        currentEntry={currentEntry}
+        currentResponses={currentResponses}
+        onResponseSelected={handleResponseSelected}
+      />
+    );
+  } else if (interviewStatus === STATUS_TRY_AGAIN) {
+    controls = <button onClick={handleContinue}>Try Again</button>;
+  } else if (interviewStatus === STATUS_CONTINUE) {
+    controls = <button onClick={handleContinue}>Continue</button>;
+  } else if (interviewStatus === STATUS_FINISH) {
+    controls = (
+      <div className="interviewFinish">
+        Share it with others and let them be prepared as well
+      </div>
+    );
+  }
 
   // useEffect(() => {
   //   if (isButtonClicked) {
@@ -29,7 +80,7 @@ export const Interview = () => {
         <h1>Try out our job interview simulator</h1>
         <p>And prep yourself for the toughest questions</p>
         <a href="#interview">
-          <button onClick={() => setInterviewStatus('showResponses')}>
+          <button onClick={() => setInterviewStatus("showResponses")}>
             Start interview
           </button>
         </a>
@@ -37,16 +88,16 @@ export const Interview = () => {
           <motion.img
             src="/man.svg"
             alt="man"
-            initial={{ x: '0vw', opacity: 1 }}
-            animate={controls2}
-            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+            initial={{ x: "0vw", opacity: 1 }}
+            animate={animation2}
+            transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }}
           />
           <motion.img
             src="/woman.svg"
             alt="woman"
-            initial={{ x: '0vw', opacity: 1 }}
-            animate={controls}
-            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+            initial={{ x: "0vw", opacity: 1 }}
+            animate={animation1}
+            transition={{ duration: 1.5, delay: 0.1, ease: "easeInOut" }}
           />
           <div className="characters-static">
             <img src="/man.svg" alt="man" className="character-static" />
@@ -62,47 +113,14 @@ export const Interview = () => {
               selectedAnswers={selectedAnswers}
             />
           ))}
-          {/* {InterviewData.map((bok, index) => {
-            if (index === currentIndex) {
-              return (
-                <motion.div
-                  className="question-container"
-                  key={bok.id}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 5, delay: 0.2, ease: 'easeInOut' }}
-                >
-                  <InterviewBubble text={bok.question_woman} isAnswer={true} />
-
-                  {bok.answers.map((answer) => (
-                    <div
-                      className="interview-reply"
-                      key={answer.color}
-                      onClick={() => {
-                        return setIsAnswerSelected(true);
-                      }}
-                    >
-                      <p> {answer.answerText}</p>
-                    </div>
-                  ))}
-                  {showEvaluation && (
-                    <div className={`evaluation ${showEvaluation.color}`}>
-                      <p>{showEvaluation.evaluation}</p>
-                    </div>
-                  )}
-                  <button
-                    onClick={() => {
-                      onClick = { handleNextQuestion };
-                      setCurrentIndex(currentIndex + 1);
-                    }}
-                    disabled={!isAnswerSelected}
-                  >
-                    Next Question
-                  </button>
-                </motion.div>
-              );
-            }
-          })} */}
+          {interviewStatus === STATUS_SHOW_RESPONSES ||
+          interviewStatus === STATUS_TRY_AGAIN ? (
+            <InterviewEntry
+              currentEntry={currentEntry}
+              selectedAnswers={currentResponses}
+            />
+          ) : null}
+          {controls}
         </div>
       </div>
     </>

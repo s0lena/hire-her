@@ -8,7 +8,7 @@ export const InterviewBubble = ({ text, speaker }) => {
   return (
     <div className={speaker === 'woman' ? 'woman-reply' : 'hr-question'}>
       <p>{text}</p>
-      <img src={speachBubbleSrc} alt="speachbubble-tail" />
+      {speaker==='hr' ?<img src={speachBubbleSrc} alt="speachbubble-tail" />:""}
     </div>
   );
 };
