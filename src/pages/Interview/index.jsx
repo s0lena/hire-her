@@ -8,6 +8,7 @@ export const Interview = () => {
   const controls = useAnimation();
   const controls2 = useAnimation();
   const [currentIndex, setCurrentIndex]=useState(0)
+  const [isAnswerSelected, setIsAnswerSelected]=useState(false)
 
 
   useEffect(() => {
@@ -67,11 +68,11 @@ export const Interview = () => {
                   <img src="/speachbubble-tail.svg" alt="speachbubble-tail" />
                 </div>
                 {bok.answers.map((answer)=>
-                <div className="interview-reply" key={answer.color}>
+                <div className="interview-reply" key={answer.color} onClick={()=>{return setIsAnswerSelected(true); console.log(isAnswerSelected)}}>
                   <p> {answer.answerText}</p>
                   
                 </div>)}
-                <button onClick={()=>setCurrentIndex(currentIndex+1)}>Next Question</button>
+                <button onClick={()=>setCurrentIndex(currentIndex+1)} disabled={!isAnswerSelected}>Next Question</button>
               </motion.div>
             );}
           })}
