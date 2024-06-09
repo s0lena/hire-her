@@ -96,6 +96,7 @@ img {
         flex-direction: column;
         padding: 20px;
         align-items: center;
+        width: 100vh;
     }
 
     .container-hero img {
