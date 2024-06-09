@@ -12,6 +12,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roobert-semibold';
+  src: url('../src/fonts/RoobertSemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roobert-medium';
+  src: url('../src/fonts/RoobertMedium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 * {
   box-sizing: border-box;

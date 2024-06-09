@@ -18,7 +18,7 @@ export const Header = () => {
 
   return (
     <header>
-      <img className="logo" src="/logo.svg"/>
+      <Link to='/'><img className="logo" src="/logo.svg"/></Link>
       <button className="hamburger" onClick={toggleMenu}>
         ☰
       </button>
@@ -30,7 +30,6 @@ export const Header = () => {
         >
           homepage
         </Link>
-        <span> | </span>
         <Link
           to="/employer-section"
           className={active === '/employer-section' ? 'active' : ''}
@@ -38,7 +37,6 @@ export const Header = () => {
         >
           for employers
         </Link>
-        <span> | </span>
         <Link
           to="/employee-section"
           className={active === '/employee-section' ? 'active' : ''}
@@ -46,7 +44,6 @@ export const Header = () => {
         >
           for employees
         </Link>
-        <span> | </span>
         <Link
           to="/test-your-company"
           className={active === '/test-your-company' ? 'active' : ''}
@@ -54,7 +51,6 @@ export const Header = () => {
         >
           test your company
         </Link>
-        <span> | </span>
         <Link
           to="/interview"
           className={active === '/interview' ? 'active' : ''}
