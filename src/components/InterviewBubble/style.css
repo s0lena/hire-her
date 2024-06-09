@@ -33,9 +33,30 @@
     align-items: center;
     padding: 15px;
     margin-bottom: 10px;
+    position:relative;
 }
 
 .woman-reply:hover {
-background-color: #E5D5F7;
+    background-color: #E5D5F7;
     border: 2px solid #7622D7;
+  }
+
+  .woman-reply-selected {
+    background-color: #E1CEF6;
+  }
+
+  .woman-reply-selected:hover {
+    background-color: #E1CEF6;
+    border:none;
+  }
+
+  .woman-reply-selected img {
+    position: absolute;
+    bottom: -190px;
+    width: 99px;
+    right: -40px;
+  }
+  
+  .woman-reply-selected img .tail {
+    height:116px;
   }

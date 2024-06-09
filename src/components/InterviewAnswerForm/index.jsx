@@ -13,9 +13,13 @@ export const InterviewAnswerForm = ({
       <div>
         {currentEntry.answers.map((answer, index) =>
           !currentResponses.includes(index) ? (
-            <button key={index} onClick={() => onResponseSelected(index)}>
-              {answer.answerText}
-            </button>
+            <div
+              className="woman-reply"
+              key={index}
+              onClick={() => onResponseSelected(index)}
+            >
+              <p>{answer.answerText}</p>
+            </div>
           ) : null
         )}
       </div>
