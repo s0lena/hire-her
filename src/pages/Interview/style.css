@@ -1,4 +1,3 @@
-
 .container-interview-simulator {
     font-family: "Roobert";
     display: flex;
@@ -37,7 +36,7 @@
 }
 
 .container-interview-simulator button:hover {
-    background:#9764d1;
+    background: #9764d1;
     border: 2px solid #9764d1;
 }
 
@@ -50,8 +49,8 @@
 }
 
 .interview-characters-container img {
- height: 444px;
- width: 175px;
+    height: 444px;
+    width: 175px;
 }
 
 .characters-static {
@@ -60,17 +59,15 @@
 
 }
 
-/*Interview*/ 
+/*Interview*/
 
 .interview {
-    height: 100vh; 
-    overflow-y: scroll; 
     padding-top: 30px;
 }
 
 .interview::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .question-container {
     display: flex;
@@ -78,28 +75,10 @@
     align-items: center;
 }
 
-.hr-question {
-    width: 345px;
-    background-color: #EFEFEF;
-    font-size: 20px;
-    display: flex;
-    border-radius: 20px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 78px;
-    position: relative;
-
-}
 
 /* spaechbubble tail */
 
-.hr-question img {
-    position: absolute;
-    bottom: -180px;
-    width:99px;
-    left: -50px;
-}
+
 
 /* .hr-question img {
     width: 100px;
@@ -108,9 +87,7 @@
     margin-right: 15px;
 } */
 
-.hr-question p {
-    width: 231px;
-}
+
 
 .interview-reply {
     width: 542px;
@@ -134,7 +111,9 @@
     margin-bottom: 0;
 }
 
-.hr-question p, .man-reply p, .woman-reply p {
+.hr-question p,
+.man-reply p,
+.woman-reply p {
     margin-bottom: 0;
     font-size: 16px;
     z-index: 100;
@@ -166,15 +145,3 @@
     padding: 25px;
     margin-bottom: 78px;
 }
-
-.woman-reply {
-    width: 350px;
-    font-size: 20px;
-    line-height: 30px;
-    background-color: #E5D5F7;
-    border: 2px solid #7622D7;
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 78px;
-}
-
