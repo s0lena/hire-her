@@ -7,6 +7,8 @@ export const Interview = () => {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const controls = useAnimation();
   const controls2 = useAnimation();
+  const [currentIndex, setCurrentIndex]=useState(0)
+
 
   useEffect(() => {
     if (isButtonClicked) {
@@ -50,15 +52,14 @@ export const Interview = () => {
         </div>
 
         <div className="interview" id="interview">
-          {InterviewData.map((bok) => {
-            return (
+          {InterviewData.map((bok,index) => {
+            if (index===currentIndex)
+            {return (
               <motion.div
                 className="question-container"
                 key={bok.id}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                // viewport={{amount:'all',
-                //    once:true,}}
                 transition={{ duration: 5, delay: 0.2, ease: 'easeInOut' }}
               >
                 <div className="hr-question">
@@ -70,8 +71,9 @@ export const Interview = () => {
                   <p> {answer.answerText}</p>
                   
                 </div>)}
+                <button onClick={()=>setCurrentIndex(currentIndex+1)}>Next Question</button>
               </motion.div>
-            );
+            );}
           })}
         </div>
       </div>
