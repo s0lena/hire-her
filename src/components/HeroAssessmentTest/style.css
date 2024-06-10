@@ -1,7 +1,10 @@
 .container-heroAssessmentTest {
   background: #7622D7;
   background-size: cover;
-  padding: 100px
+  padding-top: 80px;
+  padding-left: 176px;
+  padding-right: 176px;
+  height: 861.5px
 }
 
 .container-heroAssessmentTest h3 {
@@ -49,6 +52,7 @@
   gap: 16px;
   text-align: left;
   align-items: flex-start;
+  height: 350px;
 }
 
 .container-heroAssessmentTest__text h3,

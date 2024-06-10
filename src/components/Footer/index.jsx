@@ -11,7 +11,15 @@ export const Footer = () => {
           <div className="left-column">
             <section className="social-media">
               <h4>Social Media</h4>
-
+              <div className="social-media__row">
+                <img
+                  className="icon"
+                  src="/facebook.svg"
+                  alt="facebook logo"
+                  width="20"
+                />
+                <span>/hireher</span>
+              </div>
               <div className="social-media__row">
                 <img
                   className="icon"
@@ -29,15 +37,6 @@ export const Footer = () => {
                   width="20"
                 />
                 <span>Hire her</span>
-              </div>
-              <div className="social-media__row">
-                <img
-                  className="icon"
-                  src="/facebook.svg"
-                  alt="facebook logo"
-                  width="20"
-                />
-                <span>facebook.com/hireher</span>
               </div>
             </section>
             <section className="contact" id="contact">
