@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { InterviewBubble } from '../../components/InterviewBubble';
 import { InterviewAnswerForm } from '../../components/InterviewAnswerForm';
 import { InterviewEntry } from '../../components/InterveiwEntry';
+import { Footer } from '../../components/Footer';
 
 const STATUS_INITIAL = 'initial';
 const STATUS_SHOW_RESPONSES = 'showResponses';
@@ -19,7 +20,7 @@ export const Interview = () => {
   const [responses, setResponses] = useState([]);
   const [currentResponses, setCurrentResponses] = useState([]);
   const currentEntry = InterviewData[responses.length];
-  const [maxScrollY, setMaxScrollY] = useState(0);
+  const [isFixed, setIsFixed] = useState(false);
 
   const handleResponseSelected = (index) => {
     const newResponses = [...currentResponses, index];
@@ -60,15 +61,35 @@ export const Interview = () => {
   } else if (interviewStatus === STATUS_FINISH) {
     controls = (
       <div className="interviewFinish">
-        Share it with others and let them be prepared as well
+        <span>Share it with others and let them be prepared as well</span>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="instagram.svg" alt="instagram" />
+        </a>
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.svg" alt="linkedin" />
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="facebook.svg" alt="facebook" />
+        </a>
       </div>
     );
   }
 
   const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > maxScrollY) {
-      setMaxScrollY(currentScrollY);
+    if (!isFixed) {
+      const currentScrollY = window.scrollY;
       animation1.start({ y: currentScrollY / 2 });
       animation2.start({ y: currentScrollY / 2 });
     }
@@ -76,8 +97,8 @@ export const Interview = () => {
 
   useEffect(() => {
     if (interviewStatus === STATUS_SHOW_RESPONSES) {
-      animation1.start({ x: '-30vw', y: 0 }); // Move the man image to the left side
-      animation2.start({ x: '30vw', y: 0 }); // Move the woman image to the right side
+      animation1.start({ x: '-10vw', y: 0 }).then(() => setIsFixed(true)); // Move the man image to the left side and fix it
+      animation2.start({ x: '10vw', y: 0 }).then(() => setIsFixed(true)); // Move the woman image to the right side and fix it
       window.addEventListener('scroll', handleScroll);
       return () => {
         window.removeEventListener('scroll', handleScroll);
@@ -95,21 +116,39 @@ export const Interview = () => {
             Start interview
           </button>
         </a>
-        <div className="interview-characters-container">
-          <motion.img
-            src="/man.svg"
-            alt="man"
-            initial={{ x: '0vw', opacity: 1 }}
-            animate={animation1}
-            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-          />
-          <motion.img
-            src="/woman.svg"
-            alt="woman"
-            initial={{ x: '0vw', opacity: 1 }}
-            animate={animation2}
-            transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-          />
+        <div
+          className={`interview-characters-container ${
+            interviewStatus === 'showResponses' ? 'fixed' : ''
+          }`}
+        >
+          <div className="character-wrapper man">
+            <motion.img
+              src="/man.svg"
+              alt="man"
+              initial={{ x: '0vw', opacity: 1 }}
+              animate={animation1}
+              transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+              style={{
+                position: isFixed ? 'fixed' : 'absolute',
+                left: '10vw',
+                top: isFixed ? '10vh' : '20vh',
+              }}
+            />
+          </div>
+          <div className="character-wrapper woman">
+            <motion.img
+              src="/woman.svg"
+              alt="woman"
+              initial={{ x: '0vw', opacity: 1 }}
+              animate={animation2}
+              transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
+              style={{
+                position: isFixed ? 'fixed' : 'absolute',
+                right: '10vw',
+                top: isFixed ? '10vh' : '20vh',
+              }}
+            />
+          </div>
           {/* <div className="characters-static">
             <img src="/man.svg" alt="man" className="character-static" />
             <img src="/woman.svg" alt="woman" className="character-static" />

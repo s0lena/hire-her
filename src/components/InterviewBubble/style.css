@@ -14,7 +14,7 @@
 
 .hr-question img {
   position: absolute;
-  bottom: -180px;
+  bottom: -20px;
   width: 99px;
   left: -50px;
 }
@@ -25,38 +25,46 @@
 
 .woman-reply {
   width: 542px;
-    background-color: #F4EDFC;
-    font-size: 20px;
-    display: flex;
-    border-radius: 20px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-bottom: 10px;
-    position:relative;
+  background-color: #F4EDFC;
+  font-size: 20px;
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.woman-reply-selected {
+  position: relative;
 }
 
 .woman-reply:hover {
-    background-color: #E5D5F7;
-    border: 2px solid #7622D7;
-  }
+  background-color: #E5D5F7;
+  border: 2px solid #7622D7;
+}
 
-  .woman-reply-selected {
-    background-color: #E1CEF6;
-  }
+.woman-reply-selected {
+  background-color: #E1CEF6;
+}
 
-  .woman-reply-selected:hover {
-    background-color: #E1CEF6;
-    border:none;
-  }
+.woman-reply-selected:hover {
+  background-color: #E1CEF6;
+  border: none;
+}
 
-  .woman-reply-selected img {
-    position: absolute;
-    bottom: -190px;
-    width: 99px;
-    right: -40px;
-  }
-  
-  .woman-reply-selected img .tail {
+.woman-reply-selected img {
+  position: absolute;
+  bottom: -20px;
+  width: 99px;
+  right: -45px;
+}
+
+
+
+/* .woman-reply-selected img .tail {
     height:116px;
-  }
+  } */
