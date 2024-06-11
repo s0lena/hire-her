@@ -46,9 +46,19 @@ a.active {
 }
 
 @media (max-width: 360px) {
+    header {
+        width: 100vw;
+    }
+
     .hamburger {
         display: block;
         margin-bottom: 10px;
+        margin-right: 26px;
+        margin-top: 22px;
+    }
+
+    header button  {
+        all:unset;
     }
 
     nav {
@@ -71,5 +81,9 @@ a.active {
 
     nav span {
         display: none;
+    }
+
+    .logo {
+        margin-left:28px;
     }
 }
