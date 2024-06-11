@@ -12,31 +12,49 @@ export const Footer = () => {
             <section className="social-media">
               <h4>Social Media</h4>
               <div className="social-media__row">
-                <img
-                  className="icon"
-                  src="/facebook.svg"
-                  alt="facebook logo"
-                  width="20"
-                />
-                <span>/hireher</span>
+                <a
+                  href="https://www.facebook.com/hireher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src="/facebook.svg"
+                    alt="facebook logo"
+                    width="20"
+                  />
+                  <span>/hireher</span>
+                </a>
               </div>
               <div className="social-media__row">
-                <img
-                  className="icon"
-                  src="/instagram.svg"
-                  alt="instagram logo"
-                  width="20"
-                />
-                <span>@hireher</span>
+                <a
+                  href="https://www.instagram.com/hireher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src="/instagram.svg"
+                    alt="instagram logo"
+                    width="20"
+                  />
+                  <span>@hireher</span>
+                </a>
               </div>
               <div className="social-media__row">
-                <img
-                  className="icon"
-                  src="/linkedin.svg"
-                  alt="linkedin logo"
-                  width="20"
-                />
-                <span>Hire her</span>
+                <a
+                  href="https://www.linkedin.com/company/hireher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="icon"
+                    src="/linkedin.svg"
+                    alt="linkedin logo"
+                    width="20"
+                  />
+                  <span>Hire her</span>
+                </a>
               </div>
             </section>
             <section className="contact" id="contact">
