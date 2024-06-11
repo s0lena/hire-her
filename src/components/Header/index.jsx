@@ -18,7 +18,9 @@ export const Header = () => {
 
   return (
     <header>
-      <Link to='/'><img className="logo" src="/logo.svg"/></Link>
+      <Link to="/">
+        <img className="logo" src="/logo.svg" />
+      </Link>
       <button className="hamburger" onClick={toggleMenu}>
         ☰
       </button>

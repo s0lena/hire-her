@@ -45,6 +45,7 @@ a.active {
     display: none;
 }
 
+
 @media (max-width: 360px) {
     .hamburger {
         display: block;
