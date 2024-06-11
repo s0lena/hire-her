@@ -61,7 +61,28 @@ export const Interview = () => {
   } else if (interviewStatus === STATUS_FINISH) {
     controls = (
       <div className="interviewFinish">
-        Share it with others and let them be prepared as well
+        <span>Share it with others and let them be prepared as well</span>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="instagram.svg" alt="instagram" />
+        </a>
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="linkedin.svg" alt="linkedin" />
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="facebook.svg" alt="facebook" />
+        </a>
       </div>
     );
   }
