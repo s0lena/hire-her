@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import './style.css';
-import '../../global.css';
+import { Link } from "react-router-dom";
+import "./style.css";
+import "../../global.css";
 
 export const HeroAssessmentTest = () => {
   return (
@@ -11,12 +11,12 @@ export const HeroAssessmentTest = () => {
           for your next amazing job
         </h3>
         <div className="container-heroAssessmentTest__linked">
-          <Link to="/test-your-company" style={{ color: 'white' }}>
-            {' '}
-            Company assesment test{' '}
+          <Link to="/test-your-company" style={{ color: "white" }}>
+            {" "}
+            Company assesment test{" "}
           </Link>
-          <Link to="/interview" style={{ color: 'white' }}>
-            {' '}
+          <Link to="/interview" style={{ color: "white" }}>
+            {" "}
             Interview simulator
           </Link>
         </div>
@@ -25,7 +25,10 @@ export const HeroAssessmentTest = () => {
           id="heroAssesmentTest"
           className="container-heroAssessmentTest__text"
         >
-          <img src="/magnify.png" alt="magnify" />
+          <div className="container-heroAssessmentTest__responsive">
+            <img src="/magnify.png" alt="magnify" />
+            <h3 className="h3-responsive">Company assesment test</h3>
+          </div>
           <div className="container-heroAssessmentTest__text-content">
             <h3>Company assesment test</h3>
             <p>

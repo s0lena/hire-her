@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import './style.css';
-import '../../global.css';
+import { Link } from "react-router-dom";
+import "./style.css";
+import "../../global.css";
 
 export const HeroSplit = () => {
   return (
