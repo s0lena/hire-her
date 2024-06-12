@@ -123,7 +123,7 @@ export const Interview = () => {
         >
           <div className="character-wrapper man">
             <motion.img
-              src="/man.svg"
+              src="/man-with-shadow.svg"
               alt="man"
               initial={{ x: '0vw', opacity: 1 }}
               animate={animation1}
@@ -137,7 +137,7 @@ export const Interview = () => {
           </div>
           <div className="character-wrapper woman">
             <motion.img
-              src="/woman.svg"
+              src="/woman-with-shadow.svg"
               alt="woman"
               initial={{ x: '0vw', opacity: 1 }}
               animate={animation2}
