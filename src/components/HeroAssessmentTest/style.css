@@ -2,10 +2,11 @@
   background: #7622D7;
   background-size: cover;
   padding-top: 80px;
-  padding-left: 176px;
-  padding-right: 176px;
-  height: 861.5px;
+  /* padding-left: 176px;
+  padding-right: 176px; */
+  min-height: 861.5px;
   width: 100vw;
+  padding-bottom: 48px;
 }
 
 .container-heroAssessmentTest h3 {
@@ -26,25 +27,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   margin-bottom: 44px;
 }
 
 .container-heroAssessmentTest__text {
   background-color: white;
   width: 1088px;
-  height:450px;
-  padding: 48px;
-  padding-left: 0;
+  min-height:450px;
+  padding: 48px 0;
+  /* padding-left: 0; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   gap: 30px;
   margin: 0 auto;
   margin-bottom: 48px;
   background-color: #F1E9FB;
   flex: 1 0 0;
+  max-width: 80vw;
+  flex-wrap: wrap;
 }
 
 .container-heroAssessmentTest__text img {
@@ -59,7 +62,8 @@
   gap: 16px;
   text-align: left;
   align-items: flex-start;
-  margin-left:74px;
+  /* margin-left:74px; */
+  max-width: 100%;
   /* height: 350px; */
 }
 
@@ -101,10 +105,18 @@
   background-color: #FFFFFF;
 }
 
+.container-heroAssessmentTest__responsive {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-heroAssessmentTest__responsive .h3-responsive {
+  display: none;
+}
 
 /* Media query for mobile devices with min width of 360px */
 
-@media (max-width: 360px) {
+@media (max-width: 860px) {
   .container-heroAssessmentTest {
     padding: 20px;
   }
@@ -114,6 +126,12 @@
     line-height: 28px;
     padding: 0;
     text-align: left;
+    display: none;
+  }
+
+  .container-heroAssessmentTest__responsive .h3-responsive {
+    display: flex;
+    align-items: center;
   }
 
   .container-heroAssessmentTest__linked {
@@ -121,7 +139,7 @@
     line-height: 22px;
     flex-direction: row;
     gap: 15px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 
   .container-heroAssessmentTest__text {

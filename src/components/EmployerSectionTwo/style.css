@@ -156,7 +156,7 @@
         padding-left: 35px;
         margin:0;
         flex-direction: column-reverse;
-        width: 100wv;
+        width: 100vw;
     }
 
     .container-employers-two img {
@@ -268,6 +268,7 @@
         display: flex;
         position:absolute;
         bottom: 0px;
+        padding-top: 100px;
     }
 
     .columns-3::-webkit-scrollbar {
