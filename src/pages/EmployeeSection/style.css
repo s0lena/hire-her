@@ -53,9 +53,9 @@
 
 /* style for mobile  */
 
-@media(max-width: 360px) {
+@media(max-width: 860px) {
   .container-employeeSection {
-    padding-left: 20px;
+    padding-left: 35px;
     padding-right: 20px;
     width: 100vw;
     flex-direction: column-reverse;
@@ -67,6 +67,7 @@
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 23px;
+    margin-left: 0;
   }
 
   .container-employeeSection__image img {
@@ -81,5 +82,13 @@
     line-height: 30px;
     margin-top: 32px;
     margin-bottom: 0;
+    padding: 0;
+    font-family: "Roobert-semibold";
+  }
+
+  .container-employeeSection button {
+    margin-left: 0;
+    font-family: "Roobert-semibold";
+    margin-bottom: 103.5px;
   }
 }
