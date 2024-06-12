@@ -1,6 +1,6 @@
-import React from 'react';
-import './style.css';
-import '../../global.css';
+import React from "react";
+import "./style.css";
+import "../../global.css";
 
 export const Hero = () => {
   return (
@@ -16,20 +16,22 @@ export const Hero = () => {
             <button>Find out more</button>
           </a>
         </div>
-        <img src="/women.png" alt="women" />
+        <div className="container-hero__image">
+          <img src="/women.png" alt="women" />
+        </div>
       </div>
 
       <div className="container-statistics">
         <div className="statistic">
-          <p className="percentage"><strong>56%</strong></p>
+          <p className="percentage">56%</p>
           <p className="percentage-text">
-            <strong>of women </strong> find it hard to get back to work <br />{' '}
+            <strong>of women </strong> find it hard to get back to work <br />{" "}
             after maternity leave
           </p>
         </div>
 
         <div className="statistic">
-          <p className="percentage"><strong>77%</strong></p>
+          <p className="percentage">77%</p>
           <p className="percentage-text">
             <strong>of women</strong> can not get back to their <br /> previous
             jobs

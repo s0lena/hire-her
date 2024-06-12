@@ -1,5 +1,5 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 export const CompanyAssesementHero = () => {
   return (
@@ -13,9 +13,10 @@ export const CompanyAssesementHero = () => {
             review your workplace policies and culture to better support
             employees managing work and family commitments.
           </p>
-          
-            <a href="#test"><button className="container-hero__button">Start the test</button></a>
-          
+
+          <a href="#test">
+            <button className="container-hero__button">Start the test</button>
+          </a>
         </div>
         <img src="/magnify.svg" alt="test" />
       </div>

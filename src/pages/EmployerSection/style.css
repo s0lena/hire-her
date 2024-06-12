@@ -15,25 +15,25 @@
 
 .container-employerSection__text h2 {
   color: #000;
-  font-family: "Roobert";
+  font-family: "Roobert-medium";
   font-size: 56px;
   font-weight: 500;
-  padding-left: 24px;
-  font-weight: bold;
+  /* padding-left: 24px; */
+  /* font-weight: bold; */
   line-height: 61px;
   margin-top: 112px;
   margin-bottom: 31px;
 }
 
 .container-employerSection__text p {
-  font-family: "Roobert";
+  font-family: "Roobert-medium";
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
     display: flex;
     width: 469px;
-    margin-left: 24px;
+    /* margin-left: 24px; */
     margin-bottom: 89px;
 }
 
@@ -43,9 +43,9 @@
   height: 52px;
   border: 2px solid #7622D7;
   background: #7622D7;
-  margin-left: 24px;
+  /* margin-left: 24px; */
   margin-bottom: 106.5px;
-  font-family: 'Roobert';
+  font-family: 'Roobert-semibold';
   font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
@@ -56,6 +56,7 @@
   height: 390px;
   margin-left: 88px;
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .container-employerSection__text button:hover {
@@ -63,7 +64,7 @@
   border: 2px solid #9764d1;
 }
 
-@media(max-width: 360px) {
+@media(max-width: 860px) {
   .container-employerSection {
     padding-left: 35px;
     padding-right: 20px;

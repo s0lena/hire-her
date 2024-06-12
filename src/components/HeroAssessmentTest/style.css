@@ -4,45 +4,52 @@
   padding-top: 80px;
   padding-left: 176px;
   padding-right: 176px;
-  height: 861.5px
+  height: 861.5px;
+  width: 100vw;
 }
 
 .container-heroAssessmentTest h3 {
-  font-family: 'Roobert';
+  font-family: 'Roobert-medium';
   color: #FFFFFF;
   text-align: center;
   font-size: 42px;
-  font-weight: 500;
   line-height: 48px;
   letter-spacing: -0.20000000298023224px;
   margin-top: 0px;
+  margin-bottom: 44px;
 }
 
 .container-heroAssessmentTest__linked {
-  font-family: 'Roobert';
+  font-family: 'Roobert-semibold';
   font-size: 18px;
   line-height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 44px;
 }
 
 .container-heroAssessmentTest__text {
   background-color: white;
-  padding: 80px;
+  width: 1088px;
+  height:450px;
+  padding: 48px;
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: left;
   gap: 30px;
-
+  margin: 0 auto;
+  margin-bottom: 48px;
+  background-color: #F1E9FB;
+  flex: 1 0 0;
 }
 
 .container-heroAssessmentTest__text img {
-  max-width: 300px;
-  max-height: 300px;
-  flex-shrink: 0;
+  max-width: 450px;
+  max-height: 450px;
 }
 
 .container-heroAssessmentTest__text-content {
@@ -52,22 +59,18 @@
   gap: 16px;
   text-align: left;
   align-items: flex-start;
-  height: 350px;
-}
-
-.container-heroAssessmentTest__text h3,
-p,
-button {
-  color: black;
+  margin-left:74px;
+  /* height: 350px; */
 }
 
 .container-heroAssessmentTest__text h3 {
-  font-family: 'Roobert';
+  font-family: 'Roobert-medium';
   font-size: 28px;
-  font-weight: 500;
   line-height: 32px;
   letter-spacing: -0.20000000298023224px;
   max-width: 100%;
+  color: black;
+  margin-bottom:20px;
 }
 
 .container-heroAssessmentTest__text p {
@@ -76,18 +79,26 @@ button {
   font-weight: 400;
   line-height: 27px;
   letter-spacing: -0.44999998807907104px;
+  width:417px;
   max-width: 100%;
+  margin: 0;
 }
 
 .container-heroAssessmentTest__text button {
-  background-color: white;
+  background-color:  #F1E9FB;
   padding: 16px 32px 16px 32px;
   gap: 0px;
   border-radius: 32px;
-  border: 2px solid black;
+  border: 3px solid black;
   opacity: 1;
   align-self: flex-start;
   cursor: pointer;
+  font-family: 'Roobert-semibold';
+  font-size: 16px;
+}
+
+.container-heroAssessmentTest__text button:hover {
+  background-color: #FFFFFF;
 }
 
 

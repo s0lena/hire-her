@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #f1e8f9;
+  width:100vw;
 }
 
 .footer h3 {

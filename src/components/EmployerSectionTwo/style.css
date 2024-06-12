@@ -5,6 +5,7 @@
     background: #F2E9FC;
     background-size: cover;
     padding-left: 200px;
+    width:100vw;
            
 }
 
@@ -150,7 +151,7 @@
     display: none;
 }
 
-@media(max-width:360px) {
+@media(max-width:860px) {
     .container-employers-two {
         padding-left: 35px;
         margin:0;
@@ -224,6 +225,7 @@
         font-family: "Roobert-medium";
         padding-top: 46px;
         letter-spacing: -0.2px;
+        margin: 0 20px;
         margin-bottom: 40px;
     }
 
@@ -244,7 +246,7 @@
       .columns-3_item img {
         height: 216px;
         width: 216px;
-        margin-left: 60px;
+        margin-left: calc((100vw - 216px) / 2);
       }
       .columns-3_item h3 {
         margin-top: 0;
@@ -261,10 +263,14 @@
         margin:0 30px;
         margin-bottom: 80px;
       }
-
+    
       .progressbar-purple {
         display: flex;
         position:absolute;
         bottom: 0px;
+    }
+
+    .columns-3::-webkit-scrollbar {
+       display:none;
     }
 }
