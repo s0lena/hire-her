@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   background-color: #f1e8f9;
-  width:100vw;
+  width: 100vw;
 }
 
 .footer h3 {
@@ -138,5 +138,64 @@
   .footer-note {
     margin-top: 1rem;
     font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 600px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .social-media,
+  .contact,
+  .get-involved {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .social-media {
+    align-items: flex-start;
+  }
+
+  .contact {
+    align-items: flex-start;
+  }
+
+  .get-involved {
+    align-items: flex-start;
+  }
+
+  .contact__row,
+  .social-media__row {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact__detail,
+  .social-media__row span {
+    height: auto;
+    text-align: left;
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+  }
+
+  .get-involved__employee,
+  .get-involved__employer {
+    text-align: left;
+  }
+
+  .footer-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
   }
 }
