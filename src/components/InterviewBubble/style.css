@@ -40,6 +40,7 @@
 
 .woman-reply-selected {
   position: relative;
+  float: right;
 }
 
 .woman-reply:hover {
@@ -49,6 +50,7 @@
 
 .woman-reply-selected {
   background-color: #E1CEF6;
+  width: 345px;
 }
 
 .woman-reply-selected:hover {

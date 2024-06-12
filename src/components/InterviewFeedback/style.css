@@ -5,6 +5,7 @@
     padding: 25px 17px;
     margin-top: 30px;
     margin-bottom: 20px;
+    clear: right;
 }
 .feedback-green {
     background-color: #C7FFD7;  

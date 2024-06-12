@@ -6,6 +6,7 @@
     margin: 0;
     position: relative;
     overflow: hidden;
+    max-height:100vh;
 }
 
 .container-interview-simulator h1 {
@@ -29,7 +30,7 @@
     border: 2px solid #7622D7;
     background: #7622D7;
     margin-left: 24px;
-    margin-bottom: 105px;
+    /* margin-bottom: 105px; */
     font-family: 'Roobert';
     font-size: 16px;
     color: #FFFFFF;
@@ -53,12 +54,28 @@
     margin-left: 0;
 }
 
-.interview-characters-container img {
-    height: 444px;
-    width: 175px;
-    position: relative;
+.interview-characters-container {
+    height: 100vh;
+    margin-top: 50px;
+    /* position: relative; */
+    display: flex;
 }
 
+.interview-characters-container img .woman {
+    height: 344px;
+    width: 175px;
+    /* position: absolute;
+    top:250px; */
+    
+}
+
+.interview-characters-container img .man {
+    height: 344px;
+    width: 175px;
+    /* position: absolute;
+    top:250px; */
+    left:-25vw;
+}
 .characters-static {
     position: absolute;
     top: 350px;
@@ -68,7 +85,12 @@
 /*Interview*/
 
 .interview {
+    padding: 30px 45px;
     padding-top: 30px;
+    position:absolute;
+    top:250px;
+    overflow-y: scroll;
+    height:80vh;
 }
 
 .interview::-webkit-scrollbar {
@@ -176,4 +198,8 @@
     width: 24px;
     height: 24px;
     margin-left: 10px;
+}
+
+.display-none {
+    display: none;
 }

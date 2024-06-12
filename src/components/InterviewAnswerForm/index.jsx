@@ -8,6 +8,7 @@ export const InterviewAnswerForm = ({
   currentResponses,
   onResponseSelected,
 }) => {
+  const text = "Please choose your answer. . .";
   return (
     <>
       <div>
@@ -22,6 +23,28 @@ export const InterviewAnswerForm = ({
             </div>
           ) : null
         )}
+        <div>
+          {text.split("").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.1,
+                delay: index * 0.1,
+                repeat: Infinity,
+                repeatDelay: 3,
+              }}
+              style={{
+                color: "#7622D7",
+                fontWeight: "bold",
+              }}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </div>
       </div>
     </>
   );

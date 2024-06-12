@@ -1,17 +1,17 @@
-import './style.css';
-import { useState, useEffect } from 'react';
-import InterviewData from '../../source/interview-woman';
-import { motion, useAnimation } from 'framer-motion';
-import { InterviewBubble } from '../../components/InterviewBubble';
-import { InterviewAnswerForm } from '../../components/InterviewAnswerForm';
-import { InterviewEntry } from '../../components/InterveiwEntry';
-import { Footer } from '../../components/Footer';
+import "./style.css";
+import { useState, useEffect, useRef } from "react";
+import InterviewData from "../../source/interview-woman";
+import { motion, useAnimation } from "framer-motion";
+import { InterviewBubble } from "../../components/InterviewBubble";
+import { InterviewAnswerForm } from "../../components/InterviewAnswerForm";
+import { InterviewEntry } from "../../components/InterveiwEntry";
+import { Footer } from "../../components/Footer";
 
-const STATUS_INITIAL = 'initial';
-const STATUS_SHOW_RESPONSES = 'showResponses';
-const STATUS_TRY_AGAIN = 'tryAgain';
-const STATUS_CONTINUE = 'continue';
-const STATUS_FINISH = 'finish';
+const STATUS_INITIAL = "initial";
+const STATUS_SHOW_RESPONSES = "showResponses";
+const STATUS_TRY_AGAIN = "tryAgain";
+const STATUS_CONTINUE = "continue";
+const STATUS_FINISH = "finish";
 
 export const Interview = () => {
   const [interviewStatus, setInterviewStatus] = useState(STATUS_INITIAL);
@@ -21,22 +21,23 @@ export const Interview = () => {
   const [currentResponses, setCurrentResponses] = useState([]);
   const currentEntry = InterviewData[responses.length];
   const [isFixed, setIsFixed] = useState(false);
+  const bottomRef = useRef();
 
   const handleResponseSelected = (index) => {
     const newResponses = [...currentResponses, index];
     const reply = currentEntry.answers[index];
 
-    if (reply.color === 'green') {
+    if (reply.color === "green") {
       setCurrentResponses([]);
       setResponses([...responses, newResponses]);
       if (responses.length + 1 === InterviewData.length) {
-        setInterviewStatus('finish');
+        setInterviewStatus("finish");
       } else {
-        setInterviewStatus('continue');
+        setInterviewStatus("continue");
       }
     } else {
       setCurrentResponses(newResponses);
-      setInterviewStatus('tryAgain');
+      setInterviewStatus("tryAgain");
     }
   };
 
@@ -87,22 +88,33 @@ export const Interview = () => {
     );
   }
 
-  const handleScroll = () => {
-    if (!isFixed) {
-      const currentScrollY = window.scrollY;
-      animation1.start({ y: currentScrollY / 2 });
-      animation2.start({ y: currentScrollY / 2 });
-    }
+  // const handleScroll = () => {
+  //   if (!isFixed) {
+  //     const currentScrollY = window.scrollY;
+  //     animation1.start({ y: currentScrollY / 2 });
+  //     animation2.start({ y: currentScrollY / 2 });
+  //   }
+  // };
+
+  const scrollToBottom = () => {
+    bottomRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
+    scrollToBottom(); // Scroll when contentUpdated changes
+  }, [interviewStatus]);
+
+  useEffect(() => {
     if (interviewStatus === STATUS_SHOW_RESPONSES) {
-      animation1.start({ x: '-10vw', y: 0 }).then(() => setIsFixed(true)); // Move the man image to the left side and fix it
-      animation2.start({ x: '10vw', y: 0 }).then(() => setIsFixed(true)); // Move the woman image to the right side and fix it
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+      animation1.start({ x: "25vw" }); //.then(() => setIsFixed(true)); // Move the man image to the left side and fix it
+      animation2.start({ x: "-25vw" }); //.then(() => setIsFixed(true)); // Move the woman image to the right side and fix it
+      // window.addEventListener("scroll", handleScroll);
+      // return () => {
+      //   window.removeEventListener("scroll", handleScroll);
+      // };
+    } else if (interviewStatus === STATUS_INITIAL) {
+      animation1.start({ x: "0vw" }); // Move the man image to the center
+      animation2.start({ x: "0vw" });
     }
   }, [interviewStatus, animation1, animation2]);
 
@@ -110,43 +122,46 @@ export const Interview = () => {
     <>
       <div className="container-interview-simulator">
         <h1>Try out our job interview simulator</h1>
-        <p>And prep yourself for the toughest questions</p>
+        <p>Prep yourself for the toughest questions</p>
         <a href="#interview">
-          <button onClick={() => setInterviewStatus('showResponses')}>
+          <button
+            onClick={() => setInterviewStatus("showResponses")}
+            className={
+              interviewStatus === STATUS_INITIAL ||
+              interviewStatus === STATUS_FINISH
+                ? ""
+                : "display-none"
+            }
+          >
             Start interview
           </button>
         </a>
         <div
           className={`interview-characters-container ${
-            interviewStatus === 'showResponses' ? 'fixed' : ''
+            interviewStatus === "showResponses" ? "fixed" : ""
           }`}
         >
           <div className="character-wrapper man">
             <motion.img
               src="/man-with-shadow.svg"
               alt="man"
-              initial={{ x: '0vw', opacity: 1 }}
-              animate={animation1}
-              transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-              style={{
-                position: isFixed ? 'fixed' : 'absolute',
-                left: '10vw',
-                top: isFixed ? '10vh' : '20vh',
-              }}
+              initial={{ x: "0vw", opacity: 1 }}
+              animate={animation2}
+              transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }}
             />
           </div>
           <div className="character-wrapper woman">
             <motion.img
               src="/woman-with-shadow.svg"
               alt="woman"
-              initial={{ x: '0vw', opacity: 1 }}
-              animate={animation2}
-              transition={{ duration: 1.5, delay: 0.1, ease: 'easeInOut' }}
-              style={{
-                position: isFixed ? 'fixed' : 'absolute',
-                right: '10vw',
-                top: isFixed ? '10vh' : '20vh',
-              }}
+              initial={{ x: "0vw", opacity: 1 }}
+              animate={animation1}
+              transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }}
+              // style={{
+              //   position: isFixed ? "fixed" : "absolute",
+              //   right: "-20vw",
+              //   top: isFixed ? "20vh" : "0vh",
+              // }}
             />
           </div>
           {/* <div className="characters-static">
@@ -154,7 +169,6 @@ export const Interview = () => {
             <img src="/woman.svg" alt="woman" className="character-static" />
           </div> */}
         </div>
-
         <div className="interview" id="interview">
           {responses.map((selectedAnswers, index) => (
             <InterviewEntry
@@ -171,6 +185,7 @@ export const Interview = () => {
             />
           ) : null}
           {controls}
+          <div ref={bottomRef} />
         </div>
       </div>
     </>

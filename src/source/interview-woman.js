@@ -4,17 +4,17 @@ const InterviewData = [
   {
     id: 'q1',
     question_woman:
-      'Hello, my name is Eva, I`ll be your interviewer for today. Nice to meet you.',
+      'Hello, my name is Nick, I`ll be your interviewer for today. Nice to meet you.',
     answers: [
       {
         answerText:
-          "Hello, Eva. It's a pleasure to meet you. Thank you for taking the time to interview me today. I'm looking forward to our conversation.",
+          "Hello, Nick. It's a pleasure to meet you. Thank you for taking the time to interview me today. I'm looking forward to our conversation.",
         color: 'green',
         evaluation: 'Great, be tough, be amazing.',
       },
       {
         answerText:
-          "Hello, Eva. Nice to meet you too. I hope my lack of extensive experience won't be a major issue today.",
+          "Hello, Nick. Nice to meet you too. I hope my lack of extensive experience won't be a major issue today.",
         color: 'yellow',
         evaluation: "Don't worry about experience, confidence is key.",
       },
