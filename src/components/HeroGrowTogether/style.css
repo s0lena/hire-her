@@ -4,7 +4,6 @@
   background-color: #F2E9FC;
   background-size: cover;
   flex-wrap: wrap-reverse;
-  /* padding: 100px */
   padding-left: 200px;
   width: 100vw;
   padding-top: 120px;
@@ -22,7 +21,6 @@
   font-family: "Roobert-medium";
   font-size: 42px;
   font-style: normal;
-  /* font-weight: 500; */
   line-height: 48px;
   max-width: 50vw;
   padding-left: 24px;
@@ -67,9 +65,6 @@
 
 @media (max-width: 860px) {
   .container-heroGrowTogether {
-    /* flex-direction: column;
-    padding: 20px;
-    align-items: flex-start; */
     padding-left: 35px;
     margin: 0;
     flex-direction: column-reverse;
@@ -99,11 +94,7 @@
   }
 
   .container-hero__main button {
-    /* width: 100%; */
-    /* max-width: 200px; */
-    /* height: 45px; */
     margin-left: 0;
-    /* margin-top: 20px; */
   }
 
   .container-hero__main {
@@ -115,11 +106,5 @@
     width: 150px;
     margin: 0px;
     margin-top: 26px;
-
-    /* order: -1;
-    width: 300px;
-    height: 300px;
-    margin-top: 20px;
-    opacity: 1; */
   }
 }
