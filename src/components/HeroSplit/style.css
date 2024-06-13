@@ -19,7 +19,7 @@
   box-sizing: border-box;
   width: 100%;
   flex: 1;
-  
+
 }
 
 .container-heroSplit__employee {
@@ -68,7 +68,6 @@ a {
   text-decoration: none;
   margin-top: 10px;
 }
-
 
 
 @media (max-width: 860px) {
@@ -133,7 +132,8 @@ a {
   .container-heroSplit__employer ol {
     padding-left: 20px;
     margin-top: 10px;
-    max-width: 40vw;
+    line-height: 24px;
+    /* max-width: 40vw; */
   }
 
   a {
@@ -177,7 +177,7 @@ a {
     .container-heroSplit__employee ol,
     .container-heroSplit__employer ol {
       font-size: 16px;
-      line-height: 22px;
+      line-height: 24px;
       padding-left: 0;
       text-align: flex-start;
       padding-left: 10px;
