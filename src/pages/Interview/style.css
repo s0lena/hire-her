@@ -218,7 +218,18 @@
         text-align: center;
     }
     .container-interview-simulator p {
-        font-size: 16;
+        font-size: 16px;
         text-align: center;
     }
+    .container-interview-simulator button {
+        margin-left: 0;
+        font-size: 12px;
+    }
+    .hr-question p,
+.man-reply p,
+.woman-reply p {
+    font-size: 12px;
+    font-family: 'Roobert-medium';
 }
+}
+

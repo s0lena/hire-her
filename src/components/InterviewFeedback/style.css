@@ -21,6 +21,12 @@
 .feedback-yellow {
     background-color: #faf6b5;  
 }
-   
+
+@media(max-width:860px) {
+    .feedback {
+        font-size: 12px;
+        font-family: 'Roobert-medium';
+    }
+}
 
    
