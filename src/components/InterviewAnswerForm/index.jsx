@@ -8,7 +8,8 @@ export const InterviewAnswerForm = ({
   currentResponses,
   onResponseSelected,
 }) => {
-  const text = "Please choose your answer. . .";
+  const text = "Please choose your answer    .   .   .";
+
   return (
     <>
       <div>
@@ -24,26 +25,37 @@ export const InterviewAnswerForm = ({
           ) : null
         )}
         <div>
-          {text.split("").map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 0.1,
-                delay: index * 0.1,
-                repeat: Infinity,
-                repeatDelay: 3,
-              }}
-              style={{
-                color: "#7622D7",
-                fontWeight: "bold",
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
+          {text.split("").map((char, index) => {
+            let repeatDuration = 0.7; // Duration for repeated symbols
+            let fontSize = "25px";
+            if (index < text.length - 10) {
+              repeatDuration = 0.5;
+              fontSize = "16px"; // Duration for non-repeated symbols
+            }
+
+            return (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: repeatDuration,
+                  delay: index * 0.05,
+                  repeat: index >= text.length - 10 ? Infinity : 0,
+                  repeatDelay: 1,
+                  ease: "easeInOut",
+                }}
+                style={{
+                  color: "#7622D7",
+                  fontWeight: "bold",
+                  fontSize: fontSize,
+                }}
+              >
+                {char}
+              </motion.span>
+            );
+          })}
         </div>
       </div>
     </>

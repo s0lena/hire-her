@@ -9,6 +9,7 @@
   padding: 15px;
   margin-bottom: 39px;
   position: relative;
+  max-width:60vw;
 
 }
 
@@ -24,7 +25,7 @@
 }
 
 .woman-reply {
-  width: 542px;
+  width: 450px;
   background-color: #F4EDFC;
   font-size: 20px;
   display: flex;
@@ -32,15 +33,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  margin-bottom: 10px;
+  margin: 10px auto;
   position: relative;
   cursor: pointer;
+  max-width:60vw;
 }
 
 
 .woman-reply-selected {
   position: relative;
   float: right;
+  background-color: #E1CEF6;
+  width: 345px;
+  min-height:70px;
 }
 
 .woman-reply:hover {
@@ -48,10 +53,6 @@
   border: 2px solid #7622D7;
 }
 
-.woman-reply-selected {
-  background-color: #E1CEF6;
-  width: 345px;
-}
 
 .woman-reply-selected:hover {
   background-color: #E1CEF6;

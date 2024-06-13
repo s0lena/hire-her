@@ -97,7 +97,9 @@ export const Interview = () => {
   // };
 
   const scrollToBottom = () => {
-    bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 500);
   };
 
   useEffect(() => {
@@ -171,19 +173,31 @@ export const Interview = () => {
         </div>
         <div className="interview" id="interview">
           {responses.map((selectedAnswers, index) => (
+            // <motion.div
+            //   initial={{ opacity: 0, scale: 0.5 }}
+            //   animate={{ opacity: 1, scale: 1 }}
+            //   transition={{ duration: 1 }}
+            // >
             <InterviewEntry
               key={index}
               currentEntry={InterviewData[index]}
               selectedAnswers={selectedAnswers}
             />
+            // </motion.div>
           ))}
           {interviewStatus === STATUS_SHOW_RESPONSES ||
           interviewStatus === STATUS_TRY_AGAIN ? (
+            // <motion.div
+            //   initial={{ opacity: 0, scale: 0.5 }}
+            //   animate={{ opacity: 1, scale: 1 }}
+            //   transition={{ duration: 1 }}
+            // >
             <InterviewEntry
               currentEntry={currentEntry}
               selectedAnswers={currentResponses}
             />
-          ) : null}
+          ) : // </motion.div>
+          null}
           {controls}
           <div ref={bottomRef} />
         </div>
