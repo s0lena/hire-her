@@ -71,3 +71,33 @@
 /* .woman-reply-selected img .tail {
     height:116px;
   } */
+.avatar {
+  display:none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+@media(max-width:860px) {
+  #avatar-hr {
+    display:flex;
+    position: absolute;
+    width: 68px;
+    bottom: -80px;
+    left: -105px;
+
+  }
+  #avatar-woman {
+    display:flex;
+    position: absolute;
+    width: 68px;
+    bottom: -80px;
+    right: -105px;
+  }
+  .woman-reply-selected {
+    margin-right: 68px;
+    margin-bottom: 74px;
+  }
+  .hr-question {
+    margin-left: 68px;
+    margin-bottom: 74px;
+  }
+}

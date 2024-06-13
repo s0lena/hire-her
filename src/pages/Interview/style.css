@@ -208,6 +208,7 @@
     .container-interview-simulator {
         max-width: 100vw;
         padding: 20px;
+        margin-top: 20px;
     }
     .interview {
         max-width: 100vw;
@@ -226,10 +227,14 @@
         font-size: 12px;
     }
     .hr-question p,
-.man-reply p,
-.woman-reply p {
+    .man-reply p,
+    .woman-reply p {
     font-size: 12px;
     font-family: 'Roobert-medium';
 }
+    .interview-characters-container {
+        display: none;
+    }
+
 }
 
