@@ -57,7 +57,9 @@ export const Header = () => {
         </Link>
         <Link
           to="/interview"
-          className={active === '/interview' ? 'active' : ''}
+          className={`interview-button ${
+            active === '/interview' ? 'active' : ''
+          }`}
           onClick={() => handleLinkClick('/interview')}
         >
           interview simulator

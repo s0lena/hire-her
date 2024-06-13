@@ -19,7 +19,7 @@
   box-sizing: border-box;
   width: 100%;
   flex: 1;
-
+  border-radius: 20px;
 }
 
 .container-heroSplit__employee {
@@ -156,6 +156,7 @@ a {
       /* height: auto; */
       align-items: flex-start;
       padding: 15px;
+      border-radius: 20px;
     }
 
     .container-heroSplit__employee h3,

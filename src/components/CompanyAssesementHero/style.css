@@ -17,9 +17,7 @@
     color: #000;
     font-family: "Roobert-medium";
     font-size: 56px;
-    /* font-weight: bold; */
     line-height: 61px;
-    /* padding-left: 24px; */
     margin: 0;
 }
 
@@ -38,7 +36,6 @@
     height: 52px;
     border: 2px solid #7622D7;
     background: #7622D7;
-    /* margin-left: 24px; */
     margin-bottom: 106.5px;
     font-family: 'Roobert-semibold';
     font-size: 16px;
@@ -59,8 +56,6 @@
     }
 
     .container-hero-test img {
-        /* width: 100%;
-        height: auto; */
         width: 195px;
         height: 195px;
         margin-bottom: 16px;
