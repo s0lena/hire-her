@@ -1,7 +1,7 @@
-import { Fragment } from "react";
-import { InterviewBubble } from "../InterviewBubble";
-import { InterviewFeedback } from "../InterviewFeedback";
-import "./style.css";
+import { Fragment } from 'react';
+import { InterviewBubble } from '../InterviewBubble';
+import { InterviewFeedback } from '../InterviewFeedback';
+import './style.css';
 
 export const InterviewEntry = ({ currentEntry, selectedAnswers }) => {
   return (
