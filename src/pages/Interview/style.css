@@ -80,7 +80,7 @@
 
 .interview {
     padding: 30px 45px;
-    padding-top: 30px;
+    margin-top: 30px;
     position: absolute;
     top: 250px;
     overflow-y: scroll;

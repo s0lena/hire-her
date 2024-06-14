@@ -102,8 +102,14 @@ export const Interview = () => {
     }, 500);
   };
 
+  const [isInitialRender, setIsInitialRender] = useState(true);
+
   useEffect(() => {
-    scrollToBottom(); // Scroll when contentUpdated changes
+    if (!isInitialRender && interviewStatus !== STATUS_INITIAL) {
+      scrollToBottom(); // Scroll when interviewStatus changes and is not initial
+    } else {
+      setIsInitialRender(false);
+    }
   }, [interviewStatus]);
 
   useEffect(() => {
