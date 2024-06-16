@@ -89,6 +89,8 @@
 
 .interview::-webkit-scrollbar {
     display: none;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 }
 
 .question-container {
