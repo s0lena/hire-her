@@ -60,7 +60,7 @@ export const EmployerSectionTwo = () => {
           </div>
           <div className="columns-3_item">
             <img src="/globe.svg" alt="globe" />
-            <h3>It is lomg-term sustainable</h3>
+            <h3>It is long-term sustainable</h3>
             <p>
               Your company will no longer lose qualified employees due to
               something as common as parenthood.

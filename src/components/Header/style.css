@@ -110,6 +110,11 @@ a.active {
     .logo {
         margin-left: 28px;
     }
+
+    .interview-button {
+        font-size: 12px;
+        padding:10px; 
+    }
 }
 
 @media (max-width: 1040px) {

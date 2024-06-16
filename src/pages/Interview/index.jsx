@@ -88,18 +88,10 @@ export const Interview = () => {
     );
   }
 
-  // const handleScroll = () => {
-  //   if (!isFixed) {
-  //     const currentScrollY = window.scrollY;
-  //     animation1.start({ y: currentScrollY / 2 });
-  //     animation2.start({ y: currentScrollY / 2 });
-  //   }
-  // };
-
   const scrollToBottom = () => {
     setTimeout(() => {
       bottomRef.current.scrollIntoView({ behavior: "smooth" });
-    }, 500);
+    }, 300);
   };
 
   const [isInitialRender, setIsInitialRender] = useState(true);
@@ -114,12 +106,8 @@ export const Interview = () => {
 
   useEffect(() => {
     if (interviewStatus === STATUS_SHOW_RESPONSES) {
-      animation1.start({ x: "25vw" }); //.then(() => setIsFixed(true)); // Move the man image to the left side and fix it
-      animation2.start({ x: "-25vw" }); //.then(() => setIsFixed(true)); // Move the woman image to the right side and fix it
-      // window.addEventListener("scroll", handleScroll);
-      // return () => {
-      //   window.removeEventListener("scroll", handleScroll);
-      // };
+      animation1.start({ x: "25vw" });
+      animation2.start({ x: "-25vw" });
     } else if (interviewStatus === STATUS_INITIAL) {
       animation1.start({ x: "0vw" }); // Move the man image to the center
       animation2.start({ x: "0vw" });
@@ -165,47 +153,34 @@ export const Interview = () => {
               initial={{ x: "0vw", opacity: 1 }}
               animate={animation1}
               transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }}
-              // style={{
-              //   position: isFixed ? "fixed" : "absolute",
-              //   right: "-20vw",
-              //   top: isFixed ? "20vh" : "0vh",
-              // }}
             />
           </div>
-          {/* <div className="characters-static">
-            <img src="/man.svg" alt="man" className="character-static" />
-            <img src="/woman.svg" alt="woman" className="character-static" />
-          </div> */}
         </div>
+
         <div className="interview" id="interview">
           {responses.map((selectedAnswers, index) => (
-            // <motion.div
-            //   initial={{ opacity: 0, scale: 0.5 }}
-            //   animate={{ opacity: 1, scale: 1 }}
-            //   transition={{ duration: 1 }}
-            // >
             <InterviewEntry
               key={index}
               currentEntry={InterviewData[index]}
               selectedAnswers={selectedAnswers}
             />
-            // </motion.div>
           ))}
           {interviewStatus === STATUS_SHOW_RESPONSES ||
           interviewStatus === STATUS_TRY_AGAIN ? (
-            // <motion.div
-            //   initial={{ opacity: 0, scale: 0.5 }}
-            //   animate={{ opacity: 1, scale: 1 }}
-            //   transition={{ duration: 1 }}
-            // >
-            <InterviewEntry
-              currentEntry={currentEntry}
-              selectedAnswers={currentResponses}
-            />
-          ) : // </motion.div>
-          null}
+            <>
+              {interviewStatus !== STATUS_TRY_AGAIN && <div ref={bottomRef} />}
+              <InterviewEntry
+                currentEntry={currentEntry}
+                selectedAnswers={currentResponses}
+              />
+            </>
+          ) : null}
           {controls}
-          <div ref={bottomRef} />
+          {interviewStatus === STATUS_TRY_AGAIN ||
+          interviewStatus === STATUS_CONTINUE ||
+          interviewStatus === STATUS_FINISH ? (
+            <div ref={bottomRef} />
+          ) : null}
         </div>
       </div>
     </>

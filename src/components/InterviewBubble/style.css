@@ -1,5 +1,5 @@
 .hr-question {
-  width: 345px;
+  width: 281px;
   background-color: #EFEFEF;
   font-size: 20px;
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 .hr-question p {
-  width: 231px;
+  width: 100%;
 }
 
 .woman-reply {
@@ -37,6 +37,7 @@
   position: relative;
   cursor: pointer;
   max-width: 60vw;
+  border: 2px solid transparent
 }
 
 
@@ -89,14 +90,39 @@
     bottom: -80px;
     right: -105px;
   }
-
+  .woman-reply {
+    width:300px;
+  }
   .woman-reply-selected {
     margin-right: 68px;
-    margin-bottom: 74px;
+    margin-bottom: 50px;
   }
 
   .hr-question {
     margin-left: 68px;
     margin-bottom: 74px;
+  }
+
+  .hr-question img {
+    width:51px;
+    left:-28px;
+    bottom:-18px;
+  }
+
+  .woman-reply-selected img {
+    width:51px;
+    right: -28px;
+    bottom:-18px;
+  }
+  .hr-question, .woman-reply {
+    padding:10px;
+  }
+  .woman-reply:hover {
+    background-color:  #F4EDFC;
+    border: none;
+  }
+  .woman-reply:active {
+    background-color: #E5D5F7;
+    border: 2px solid #7622D7;
   }
 }

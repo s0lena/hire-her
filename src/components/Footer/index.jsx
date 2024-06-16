@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import './style.css';
-import '../../global.css';
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import "./style.css";
+import "../../global.css";
 
 export const Footer = () => {
   return (
@@ -68,10 +68,10 @@ export const Footer = () => {
             <section className="get-involved">
               <h4>Get involved</h4>
               <Link to="/employee-section" className="get-involved__employee">
-                I am employee
+                I am an employee
               </Link>
               <Link to="/employer-section" className="get-involved__employer">
-                I am employer
+                I am an employer
               </Link>
             </section>
           </div>
