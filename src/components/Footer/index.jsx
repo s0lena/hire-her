@@ -8,7 +8,7 @@ export const Footer = () => {
       <footer className="footer" id="footer">
         <h3>Get involved and support experts on maternity leave!</h3>
         <div className="footer-container">
-          <div className="left-column">
+          <div className="footer-column">
             <section className="social-media">
               <h4>Social Media</h4>
               <div className="social-media__row">
@@ -57,6 +57,8 @@ export const Footer = () => {
                 </a>
               </div>
             </section>
+          </div>
+          <div className="footer-column">
             <section className="contact" id="contact">
               <h4>Contact</h4>
               <div className="contact__row">
@@ -64,7 +66,8 @@ export const Footer = () => {
               </div>
             </section>
           </div>
-          <div className="right-column">
+
+          <div className="footer-column">
             <section className="get-involved">
               <h4>Get involved</h4>
               <Link to="/employee-section" className="get-involved__employee">
