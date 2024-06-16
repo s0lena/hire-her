@@ -117,12 +117,12 @@
   .hr-question, .woman-reply {
     padding:10px;
   }
-  .woman-reply:hover {
+  /* .woman-reply:hover {
     background-color:  #F4EDFC;
     border: none;
   }
   .woman-reply:active {
     background-color: #E5D5F7;
     border: 2px solid #7622D7;
-  }
+  } */
 }
