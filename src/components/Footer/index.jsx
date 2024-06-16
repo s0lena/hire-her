@@ -13,7 +13,7 @@ export const Footer = () => {
               <h4>Social Media</h4>
               <div className="social-media__row">
                 <a
-                  href="https://www.facebook.com/hireher"
+                  href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -28,7 +28,7 @@ export const Footer = () => {
               </div>
               <div className="social-media__row">
                 <a
-                  href="https://www.instagram.com/hireher"
+                  href="https://www.instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -43,7 +43,7 @@ export const Footer = () => {
               </div>
               <div className="social-media__row">
                 <a
-                  href="https://www.linkedin.com/company/hireher"
+                  href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
