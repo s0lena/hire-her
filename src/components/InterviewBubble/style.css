@@ -10,6 +10,7 @@
   margin-bottom: 39px;
   position: relative;
   max-width: 60vw;
+  border: 2px solid transparent;
 
 }
 
@@ -47,6 +48,7 @@
   background-color: #E1CEF6;
   width: 345px;
   min-height: 70px;
+  border: 2px solid transparent;
 }
 
 .woman-reply:hover {
@@ -57,7 +59,7 @@
 
 .woman-reply-selected:hover {
   background-color: #E1CEF6;
-  border: none;
+  border: 2px solid transparent;
 }
 
 .woman-reply-selected img {
