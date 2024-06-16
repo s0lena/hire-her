@@ -39,24 +39,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-
-/* .container {
-  max-width: 100vw;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ebeff4;
-}
-
-h2 {
-  font-size: 50px;
-  height: 50vh;
-} */

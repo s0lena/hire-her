@@ -67,7 +67,7 @@ a.active {
 
 @media (max-width: 860px) {
     header {
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
@@ -102,6 +102,7 @@ a.active {
 
     nav a {
         padding: 10px 0;
+        margin-left: 20px;
     }
 
     nav span {

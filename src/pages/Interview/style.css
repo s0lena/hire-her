@@ -170,13 +170,13 @@
 
 @media(max-width:860px) {
     .container-interview-simulator {
-        max-width: 100vw;
+        max-width: 100%;
         padding: 20px;
         margin-top: 20px;
     }
 
     .interview {
-        max-width: 100vw;
+        max-width: 100%;
     }
 
     .container-interview-simulator h1 {
