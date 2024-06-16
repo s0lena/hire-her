@@ -62,7 +62,9 @@ export const Footer = () => {
             <section className="contact" id="contact">
               <h4>Contact</h4>
               <div className="contact__row">
-                <span className="contact__detail">hi@hireher.cz</span>
+                <a href="mailto:hi@hireher.cz" className="contact__detail">
+                  hi@hireher.cz
+                </a>
               </div>
             </section>
           </div>
@@ -70,12 +72,12 @@ export const Footer = () => {
           <div className="footer-column">
             <section className="get-involved">
               <h4>Get involved</h4>
-              <Link to="/employee-section" className="get-involved__employee">
+              <a href="/employee-section" className="get-involved__employee">
                 I am an employee
-              </Link>
-              <Link to="/employer-section" className="get-involved__employer">
+              </a>
+              <a href="/employer-section" className="get-involved__employer">
                 I am an employer
-              </Link>
+              </a>
             </section>
           </div>
         </div>

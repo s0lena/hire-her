@@ -54,6 +54,11 @@
   border: 3px solid black;
 }
 
+.container-hero__main button:hover {
+  background-color: #FFFFFF;
+}
+
+
 .container-heroGrowTogether img {
   width: 500px;
   height: fit-content;
