@@ -17,7 +17,7 @@ export const Hero = () => {
           </a>
         </div>
         <div className="container-hero__image">
-          <img src="/women.png" alt="women" />
+          <img src="/women.svg" alt="women" />
         </div>
       </div>
 
