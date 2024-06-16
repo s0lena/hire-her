@@ -1,21 +1,21 @@
 // Import Swiper React komponenty
-import React, { useState, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { HeroSplit } from '../../components/HeroSplit';
-import { TestResults } from '../TestResults';
+import React, { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { HeroSplit } from "../../components/HeroSplit";
+import { TestResults } from "../TestResults";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-creative';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/effect-creative";
+import "swiper/css/pagination";
 
-import './style.css';
+import "./style.css";
 
 // import required moduls
-import { EffectCreative } from 'swiper/modules';
-import { Navigation } from 'swiper/modules';
-import { Pagination } from 'swiper/modules';
-import { questions } from '../Questions';
+import { EffectCreative } from "swiper/modules";
+import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
+import { questions } from "../Questions";
 
 export const Test = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -23,11 +23,6 @@ export const Test = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const swiperRef = useRef(null);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsSubmitted(true);
-  };
 
   const slideToQuestion = (index) => {
     swiperRef.current.swiper.slideTo(index);
@@ -72,16 +67,16 @@ export const Test = () => {
           <Swiper
             ref={swiperRef}
             grabCursor={true}
-            effect={'creative'}
+            effect={"creative"}
             creativeEffect={{
               prev: { shadow: true, translate: [0, 0, -400] },
-              next: { translate: ['100%', 0, 0] },
+              next: { translate: ["100%", 0, 0] },
             }}
             modules={[EffectCreative, Navigation, Pagination]}
-            pagination={{ type: 'progressbar' }}
+            pagination={{ type: "progressbar" }}
             navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
             }}
             className="swiper"
           >
@@ -113,12 +108,12 @@ export const Test = () => {
                         className="button-transparent"
                         onClick={() =>
                           handleAnswerOptionClick(
-                            question.options[selectedOption].points,
+                            question.options[selectedOption].points
                           )
                         }
                         disabled={selectedOption === null}
                       >
-                        {isLastQuestion ? 'See results' : 'Next'}
+                        {isLastQuestion ? "See results" : "Next"}
                       </button>
                     </div>
                   </fieldset>

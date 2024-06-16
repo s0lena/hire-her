@@ -20,8 +20,34 @@ export const Interview = () => {
   const [responses, setResponses] = useState([]);
   const [currentResponses, setCurrentResponses] = useState([]);
   const currentEntry = InterviewData[responses.length];
-  const [isFixed, setIsFixed] = useState(false);
   const bottomRef = useRef();
+  const [isInitialRender, setIsInitialRender] = useState(true);
+
+  let controls = null;
+
+  useEffect(() => {
+    if (!isInitialRender && interviewStatus !== STATUS_INITIAL) {
+      scrollToBottom(); // Scroll when interviewStatus changes and is not initial
+    } else {
+      setIsInitialRender(false);
+    }
+  }, [interviewStatus]);
+
+  useEffect(() => {
+    if (interviewStatus === STATUS_SHOW_RESPONSES) {
+      animation1.start({ x: "25vw" });
+      animation2.start({ x: "-25vw" });
+    } else if (interviewStatus === STATUS_INITIAL) {
+      animation1.start({ x: "0vw" });
+      animation2.start({ x: "0vw" });
+    }
+  }, [interviewStatus, animation1, animation2]);
+
+  const scrollToBottom = () => {
+    setTimeout(() => {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }, 300);
+  };
 
   const handleResponseSelected = (index) => {
     const newResponses = [...currentResponses, index];
@@ -44,8 +70,6 @@ export const Interview = () => {
   const handleContinue = () => {
     setInterviewStatus(STATUS_SHOW_RESPONSES);
   };
-
-  let controls = null;
 
   if (interviewStatus === STATUS_SHOW_RESPONSES) {
     controls = (
@@ -87,32 +111,6 @@ export const Interview = () => {
       </div>
     );
   }
-
-  const scrollToBottom = () => {
-    setTimeout(() => {
-      bottomRef.current.scrollIntoView({ behavior: "smooth" });
-    }, 300);
-  };
-
-  const [isInitialRender, setIsInitialRender] = useState(true);
-
-  useEffect(() => {
-    if (!isInitialRender && interviewStatus !== STATUS_INITIAL) {
-      scrollToBottom(); // Scroll when interviewStatus changes and is not initial
-    } else {
-      setIsInitialRender(false);
-    }
-  }, [interviewStatus]);
-
-  useEffect(() => {
-    if (interviewStatus === STATUS_SHOW_RESPONSES) {
-      animation1.start({ x: "25vw" });
-      animation2.start({ x: "-25vw" });
-    } else if (interviewStatus === STATUS_INITIAL) {
-      animation1.start({ x: "0vw" }); // Move the man image to the center
-      animation2.start({ x: "0vw" });
-    }
-  }, [interviewStatus, animation1, animation2]);
 
   return (
     <>

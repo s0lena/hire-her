@@ -1,10 +1,10 @@
-import './style.css';
-import '../../global.css';
+import "./style.css";
+import "../../global.css";
 
 export const EmployeeSectionTwo = () => {
   return (
     <>
-      <div className="container-employeeSection__partTwo">
+      <div className="container-employeeSection__partTwo" id="employee_section">
         <div className="container-employeeSection__image">
           <img src="/woman-with-dog.png" alt="WomanAndDog" />
         </div>
@@ -19,7 +19,9 @@ export const EmployeeSectionTwo = () => {
             and explore companies where you can pursue an ideal career path
             while remaining a caring parent.
           </p>
-          <button>Find out more</button>
+          <a href="/interview">
+            <button>Find out more</button>
+          </a>
         </div>
       </div>
     </>

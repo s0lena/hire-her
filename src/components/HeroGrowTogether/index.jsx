@@ -14,7 +14,7 @@ export const HeroGrowTogether = () => {
             talking about moms. The opportunity to combine work and family is
             equally important for fathers."
           </p>
-          <a href="/employee-section">
+          <a href="/employer-section">
             <button>See how you can include them</button>
           </a>
         </div>

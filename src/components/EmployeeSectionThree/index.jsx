@@ -1,5 +1,5 @@
-import './style.css';
-import '../../global.css';
+import "./style.css";
+import "../../global.css";
 
 export const EmployeeSectionThree = () => {
   return (
@@ -13,7 +13,9 @@ export const EmployeeSectionThree = () => {
             family context? We will help you reintegrate into the job market and
             fully prepare for job interviews.
           </p>
-          <button>Payroll Features</button>
+          <a href="#footer">
+            <button>Contact us</button>
+          </a>
         </div>
         <div className="container-employeeSection__image">
           <img src="/woman-with-man.png" alt="WomanWithMan" />

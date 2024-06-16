@@ -5,7 +5,7 @@ import "../../global.css";
 export const Footer = () => {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer" id="footer">
         <h3>Get involved and support experts on maternity leave!</h3>
         <div className="footer-container">
           <div className="left-column">
